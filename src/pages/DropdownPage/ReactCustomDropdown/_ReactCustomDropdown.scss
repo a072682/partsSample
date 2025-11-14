@@ -1,0 +1,111 @@
+
+
+// 元件最外層
+.Dropdown{
+
+    /* 元件標頭 */
+    .DropdownHeader{
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid #90caf9;
+      background-color: #e3f2fd;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: left;
+      position: relative;
+      color: #0d47a1;
+    }
+    
+    /* 元件本體 */
+    .triple-dropdown-menu,.dropdown-menu {
+      display: none;
+      padding: 0.5rem;
+      background-color: white;
+      border: 1px solid #ccc;
+      min-width: 600px;
+      gap: 1rem;
+
+      &.show{
+        display: flex;
+      }
+
+      /* 內部第一層 */
+      .menu-column,.main-menu{
+        display: flex;
+        flex-direction: column;
+        min-width: 150px;
+        background-color: aqua;
+        position: relative;
+
+        /* 內部第一層選項設定 */
+        .menu-btn {
+          padding: 0.5rem 1rem;
+          text-align: left;
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.2s;
+
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+
+        /* 內部第二層 */
+        .menu-column,.sub-menu{
+          display: flex;
+          flex-direction: column;
+          min-width: 150px;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          background-color: aquamarine;
+
+          /* 內部第二層選項設定 */
+          .menu-btn {
+            padding: 0.5rem 1rem;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+
+            &:hover {
+              background-color: #f0f0f0;
+            }
+          }
+
+          /* 內部第三層 */
+          .menu-column.leaf-menu{
+            display: flex;
+            flex-direction: column;
+            min-width: 150px;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: rgb(232, 255, 127);
+
+            /* 內部第三層選項設定 */
+            .menu-btn {
+              padding: 0.5rem 1rem;
+              text-align: left;
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-size: 14px;
+              transition: background-color 0.2s;
+
+              &:hover {
+                background-color: #f0f0f0;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+

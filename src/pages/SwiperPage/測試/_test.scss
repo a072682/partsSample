@@ -1,0 +1,186 @@
+
+/* 大輪播圖背景 */
+.testBackGround{
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+
+    /* 大圖輪播 */
+    .testSwiper{
+        width: 100%;
+        max-height: 300px;
+        //輪播本體
+        .swiperSlide{
+
+            /* 輪播片內容 */
+            .videoSet{
+                width: 100%;
+                height: auto;
+                aspect-ratio: 500 / 290;
+                max-height: 100%;
+                .bgVideo {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; // 跟背景圖 cover 一樣，充滿且裁切
+                    pointer-events: none; // 避免擋到前景點擊
+                    border-radius: 8px;
+                }
+            }
+            /* 輪播片內容 */
+        }
+        //輪播本體
+    }
+    /* 大圖輪播 */
+
+    
+    
+}
+/* 背景 */
+
+// 小圖輪播背景
+.backGroundSecond{
+    width: 100%;
+    height: auto;
+    /* 控制欄 */
+    .controlItemBox{
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /* 左右按鈕 */
+        .testSwiper-button-prev,.testSwiper-button-next{
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 52px;
+            height: auto;
+            aspect-ratio: 54 / 52;
+            background-color: transparent;
+            background-position: center 0;      /* 左上角 */
+            background-size: 100% 200%;    /* 寬度填滿，高度等比 */
+            background-repeat: no-repeat;
+            border: none;
+            transition: transform 0.2s ease;
+            &:hover {
+                background-position-y: 100%;
+            }
+
+            &:active {
+                background-position-y: 100%;
+            }
+        }
+
+        .testSwiper-button-prev{
+            background-image: url("/images/swiper/thumbs範例/控制欄按鈕/factionsPrev.png");
+        }
+
+        .testSwiper-button-next{
+            background-image: url("/images/swiper/thumbs範例/控制欄按鈕/factionsNext.png");
+        }
+        /* 左右按鈕 */
+
+        /* 縮圖輪播外框 */
+        .swiperBox{
+            width:100%;
+            max-width: 272px;
+            height: auto;
+            flex: 1 1 0; 
+            align-self: stretch;
+            min-height: 0;
+            /* 縮圖輪播 */
+            .thumbsThumbnailSwiper{
+                width: 100%;
+                height: 100%;
+                //輪播本體
+                .swiper-slide.swiperSlide{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    /* 輪播片內容 */
+                    .imgBox{
+                        width: 100%; // 根據圖片大小調整
+                        max-width: 191px;
+                        aspect-ratio: 191 / 86;
+                        background-color: transparent;
+                        background-image: url('/images/動畫/雙重swiper/左箭頭/factionsPrev.png');
+                        background-position: center 0;      /* 左上角 */
+                        background-size: 100% 200%;    /* 寬度填滿，高度等比 */
+                        background-repeat: no-repeat;
+                        border: none;
+                        padding: 0px;
+                        transition: transform 0.2s ease;
+                        &:hover {
+                            background-position-y: 100%;
+                        }
+
+                        &:active {
+                            background-position-y: 100%;
+                        }
+                    }
+                    /* 輪播片內容 */
+
+                    &.swiper-slide-active{
+                        /* 輪播片內容 */
+                        
+                        .imgBox{
+                            width: 100%; // 根據圖片大小調整
+                            max-width: 191px;
+                            aspect-ratio: 191 / 86;
+                            background-color: transparent;
+                            background-image: url('/images/動畫/雙重swiper/左箭頭/factionsPrev.png');
+                            background-position: center 0;      /* 左上角 */
+                            background-position-y: 100%;
+                            background-size: 100% 200%;    /* 寬度填滿，高度等比 */
+                            background-repeat: no-repeat;
+                            padding: 0px;
+                            transition: transform 0.2s ease;
+                            border: 2px solid #ffffff;
+                        }
+                        /* 輪播片內容 */
+
+                    }
+                }
+                //輪播本體
+                
+                //左右頁按鈕
+                .swiper-button-prev,
+                .swiper-button-next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 56px;
+                    height: 56px;
+                    background-color: #ffffff;
+                    color:#0068ff ;
+                    border-radius: 12px;
+                    z-index: 10;
+                    &:hover{
+                        background-color: #0068ff;
+                        color:#ffffff ;
+                    }
+                }
+
+                .swiper-button-prev {
+                    left: 20px;
+                }
+
+                .swiper-button-next {
+                    right: 20px;
+                }
+            }
+            /* 縮圖輪播 */
+        }
+        /* 縮圖輪播外框 */
+
+        
+    }
+    /* 控制欄 */
+}
+// 小圖輪播背景
+
+
+
+  

@@ -1,0 +1,70 @@
+
+
+  /*淡出效果*/
+    /* 外層 wrapper - 控制高度＋透明度 */
+    .custom-collapse-wrapper {
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+      opacity: 0;
+    }
+
+    /* 展開時 */
+    .custom-collapse-wrapper.show {
+      opacity: 1;
+    }
+
+    /* 收合時 */
+    .custom-collapse-wrapper.hide {
+      opacity: 0;
+    }
+
+    /* 內層內容 */
+    .custom-collapse-content02 {
+      max-height: 200px;
+      overflow-y: auto;
+      background-color: #ffe0b2;
+      border: 2px solid #ff9800;
+      color: #e65100;
+      font-size: 1.2rem;
+      padding: 1.5rem;
+    }
+  
+
+
+/*垂直*/
+.horizontal-collapse-wrapper {
+  height: 200px;   /* 高度固定，讓左右展開有明顯感覺 */
+  background-color: #f5f5f5;
+  overflow: hidden;
+  margin-top: 1rem;
+  position: relative;
+}
+
+/* 收合狀態：width 0 */
+.horizontal-collapse-content {
+  width: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #ffe0b2;
+  transition: width 0.5s ease;
+  white-space: nowrap; /* 不換行，確保內容水平滾動 */
+  border: none;
+}
+
+/* 展開狀態：width 300px */
+.horizontal-collapse-content.open {
+  width: 300px;
+  border: 2px solid #ff9800;
+}
+
+/* 內容區 */
+.collapse-inner-content {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  color: #e65100;
+  /* overflow-y: auto; */
+  height: 100%;
+}
+    
+
+  

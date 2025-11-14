@@ -1,0 +1,128 @@
+.step-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-container.vertical {
+  height: 700px;
+}
+
+.step-container.horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.step-container.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-item {
+  display: flex;
+  position: relative;
+}
+
+/* 水平：圓形在上、文字在下 */
+.step-container.horizontal .step-item {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 垂直：圓形在左、文字在右 */
+.step-container.vertical .step-item {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 圓形樣式 */
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+
+/* 文字標籤 */
+.step-label {
+  font-size: 16px;
+}
+
+.step-container.horizontal .step-label {
+  margin-top: 6px;
+  margin-left: 0;
+}
+
+.step-container.vertical .step-label {
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+/* 線條樣式：連接下一個圓形 */
+.step-line {
+  position: absolute;
+  background-color: #ff7070;
+  z-index: 0;
+}
+
+/* 水平：橫線往右延伸 */
+.step-container.horizontal .step-line {
+  height: 4px;
+  width: 250px;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+
+/* 垂直：直線往下延伸 */
+.step-container.vertical .step-line {
+  width: 4px;
+  height: 250px;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+}
+
+/* 顏色狀態 */
+.step-item.completed .step-circle {
+  background-color: #4caf50;
+}
+
+.step-item.active .step-circle {
+  background-color: #2196f3;
+}
+
+/* 手機響應式處理：水平轉為垂直 */
+@media (max-width: 600px) {
+  .step-container.horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+  }
+
+  .step-container.horizontal .step-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .step-container.horizontal .step-label {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .step-container.horizontal .step-line {
+    width: 4px;
+    height: 40px;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+  }
+}

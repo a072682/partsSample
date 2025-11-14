@@ -1,0 +1,32 @@
+.header{
+    height: 100vh;
+    background-color:transparent;
+
+    .item-box{
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .item{
+            display: block;
+            width: 100%;
+            height: fit-content;
+            color:rgb(112, 150, 205);
+            background-color: #ffffff;
+            padding: 12px 0;
+            text-align: center;
+            border-radius: 12px;
+            border: 2px solid rgb(112, 150, 205);
+            .text{
+                
+            }
+        &:hover{
+            background-color: rgb(112, 150, 205);
+            color:#ffffff;
+            .text{
+                
+            }
+        }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+
+
+
+// 垂直 Accordion 區塊
+.horizontal-accordion-wrapper {
+  display: flex;
+  align-items: stretch;
+  border: 2px solid #ff9800;
+  width: 600px;
+  height: 200px;
+  overflow: hidden;
+
+  .horizontal-accordion-header {
+    background-color: #ffe0b2;
+    color: #e65100;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .horizontal-accordion-body {
+    width: 0;
+    background-color: #fff3e0;
+    overflow-y: hidden;
+    overflow-x: auto;
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    &.open {
+      width: 400px;
+      opacity: 1;
+    }
+
+    .accordion-body-content {
+      padding: 1.5rem;
+      font-size: 1rem;
+      color: #6d4c41;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}

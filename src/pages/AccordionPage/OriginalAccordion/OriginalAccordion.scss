@@ -1,0 +1,54 @@
+
+
+
+// ✅ 移除點擊時的藍色外框陰影
+.button-SpecialEffects.button-SpecialEffects.button-SpecialEffects{
+    &:focus {
+      // 預設點擊特效重要度較高因此要重複宣告進行覆蓋
+      box-shadow: none; // ✅ 移除點擊時的藍色外框陰影
+      outline: none;     // ✅ 移除可能的 outline
+    }
+}
+
+
+// 整個客製化手風琴
+.custom-accordion {// 整體元件背景
+  max-width: 600px;
+  min-height: auto;
+  border: 2px solid #4caf50; // 綠色外框
+  background-color: #f0f9f0; // 淺綠背景
+  padding: 10px;
+  // 自訂手風琴每一項
+  &-item {
+    border: none; // 移除原本的 item 邊框 
+  }
+
+  // 只影響 custom-accordion 底下的 button
+  &-button {
+    &.custom-accordion-button {
+      background-color: brown;
+      color: #2e7d32;
+      font-weight: bold;
+      font-size: 1.25rem;
+      padding: 1rem;
+      box-shadow: none; // 移除預設陰影
+      border: none;     // 取消按鈕邊框
+
+      // 只影響展開的按鈕
+      &:not(.collapsed) {
+        background-color: #760eff;
+        color: #afffb5;
+      }
+    }
+  }
+
+  // 只影響 custom-accordion 底下的 body
+  &-body {
+    background-color: #1c20fc;
+    color: #e23232;
+    font-size: 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+

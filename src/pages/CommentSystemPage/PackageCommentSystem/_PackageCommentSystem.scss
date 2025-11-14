@@ -1,0 +1,239 @@
+/* 留言室最外框 */
+.Comment{
+
+    /* 留言輸入區 */
+    .Comment-container{
+        padding: 16px;
+
+        /* 桌面板留言室外框 */
+        .avatar-dk{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 24px;
+
+            /* 使用者頭像 */
+            .dk-img{
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            /* 留言室外框 */
+            .dk-avatar-box{
+                width: 100%;
+
+                /* 留言者名稱 */
+                .dk-user{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+
+                /* 留言區本體 */
+                .dk-textarea{
+                    margin-top:16px;
+                    padding: 16px;
+                    width: 100%;
+                    min-height: 116px;
+                    border: none;
+                }
+
+                /* 備註&送出按鈕外框 */
+                .dk-btn-container{
+                    margin-top:16px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    /* 備註本體 */
+                    .dk-Caption{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 8px        ;
+                    }
+
+                    /* 送出按鈕本體 */
+                    button{
+                        border: none;
+                        border-radius: 12px;
+                        padding: 12px 16px;
+                        background-color: #0068ff;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        /* 手機版留言室 */
+        .avatar{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap:8px;
+
+            /* 使用者頭像 */
+            img{
+                width: 32px;
+                height: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            /* 使用者名稱 */
+            .user{
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            /* 手機板留言室外框 */
+            .avatar-box{
+
+                /* 留言區本體 */
+                .textarea{
+                    margin-top: 16px;
+                    padding: 8px;
+                    width: 100%;
+                    min-height: 100px;
+                    border: none;
+                }
+
+                /* 備註&送出按鈕外框 */
+                .btn-container{
+
+                    /* 備註本體 */
+                    .Caption{
+                        margin-top:16px;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        p{
+                            height: fit-content;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 1.5;
+                            color: #4b4b4b;
+                        }
+                    }
+
+                    /* 送出按鈕本體 */
+                    button{
+                        margin-top:8px;
+                        width: 100%;
+                        border: none;
+                        border-radius: 12px;
+                        background-color: #0068ff;
+                        color:#ffffff;
+                        padding: 12px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /* 留言列表區 */
+    .Comment-List{
+        margin-top: 16px;
+
+        /* 留言外框 */
+        .List-container{
+            padding: 16px;
+
+            /* 留言者區塊外框 */
+            .avatar{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 8px;
+
+                /* 留言者照片 */
+                img{
+                    width: 44px;
+                    height: 44px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                /* 留言者區塊外框 */
+                .user{
+
+                    /* 留言者姓名 */
+                    .name{
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+
+                    /* 留言時間 */
+                    .time{
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: #909090;
+                    }
+                }
+            }
+
+            /* 留言本體 */
+            .comment{
+                margin-top: 24px;
+                width: 100%;
+                height: fit-content;
+                font-weight: 400;
+                font-size: 14px;
+                color: #4b4b4b;
+            }
+
+            /* 回應留言者外框 */
+            .answer{
+                padding: 16px;
+
+                /* 回應者區塊外框 */
+                .Caption{
+
+                    /* 回應者資訊區塊外框 */
+                    .title-container{
+                        display: flex;
+                        justify-items: start;
+                        align-items: center;
+                        gap:8px;
+
+                        /* 回應者姓名 */
+                        .title{
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 1.5;
+                        }
+
+                        /* 回應者稱號 */
+                        .teacher{
+                            border-radius: 8px;
+                            border: 1px solid #0068ff;
+                            color: #0068ff;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 1.5;
+                        }
+                    }
+
+                    /* 回應留言時間 */
+                    .time{
+                        margin-top: 4px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: #909090;
+                    }
+                }
+
+                /* 回應留言本體 */
+                .content{
+
+                }
+            }
+        }
+    }
+}

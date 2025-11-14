@@ -1,0 +1,83 @@
+
+
+/* 元件最外圍 */
+.DefaultSwiper{
+    position: relative;
+    height: 50vh;
+    //輪播本體
+    .swiperSlide{
+
+        /* 輪播片內容 */
+        .slide-item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 輪播片內容 */
+    }
+    //輪播本體
+    
+    //頁碼按鈕
+    .swiper-pagination {
+        position:absolute;
+        width: 100%;
+        height: auto;
+        bottom: 66px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 15;
+        justify-content: center;
+        align-items: center;
+
+        .swiper-pagination-bullet {
+            width: 24px;
+            height: 8px;
+            border-radius: 100px;
+            background-color: #ff0000;
+            opacity: 1;
+            cursor: pointer;
+            // flex-shrink: 0; // 防止被壓扁
+            // display: block;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #007bff;
+        }
+    }
+
+    
+
+    //左右頁按鈕
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 56px;
+        height: 56px;
+        background-color: #ffffff;
+        color:#0068ff ;
+        border-radius: 12px;
+        z-index: 10;
+        &:hover{
+            background-color: #0068ff;
+            color:#ffffff ;
+        }
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+    }
+
+    .swiper-button-next {
+        right: 20px;
+    }
+}
+/* 元件最外圍 */
+
+
+
+  

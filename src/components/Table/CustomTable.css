@@ -1,0 +1,38 @@
+.custom-table-wrapper {
+    padding: 1rem;
+    background-color: #fff8e1;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  
+  .custom-table thead {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ffcc80;
+    text-align: left;
+  }
+
+  .text-center{
+    text-align: center;
+  }
+
+  .text-end{
+    text-align: right;
+  }
+  
+  .custom-table tr:hover {
+    background-color: #fff3e0;
+  }
+  

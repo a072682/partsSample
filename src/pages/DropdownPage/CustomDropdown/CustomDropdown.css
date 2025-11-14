@@ -1,0 +1,54 @@
+.custom-dropdown {
+    position: relative;
+    width: 200px;
+    margin: 2rem auto;
+  }
+  
+  .dropdown-toggle-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #90caf9;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    color: #0d47a1;
+  }
+  
+  .dropdown-toggle-btn .arrow {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+
+  /* 下拉列表區塊 */
+  .dropdown-list {
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    right: 0;
+    width: 200px;
+    border: 2px solid #90caf9;
+    border-top: none;
+    background-color: #ffffff;
+    z-index: 10;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* 選項本身設定 */
+  .dropdown-list li {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    color: #1565c0;
+  }
+  
+  .dropdown-list li:hover {
+    background-color: #bbdefb;
+  }
+  

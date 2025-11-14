@@ -1,0 +1,66 @@
+
+
+/* 元件最外圍 */
+.CollapseGroup{
+
+    /* 元件標頭 */
+    .custom-collapse-button {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #ff9800;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+    }
+
+    /* 元件下拉本體 */
+    .Collapse{
+
+        /* 內容外框 */
+        .custom-collapse-content-box{
+
+            /* 內容本體 */
+            .custom-collapse-content {
+                width: 600px;
+                height: 100px;
+                overflow-y: auto;
+                background-color: #ffe0b2;
+                color: #e65100;
+                font-size: 1.2rem;
+                border: 2px solid #ff9800;
+                padding: 1.5rem;
+                margin-top: 10px;
+                position: relative;
+                left: 50px;
+                transition: all 0.4s ease;
+            
+                /* 滾動條客製化 */
+                /* scrollbar-width: thin;
+                scrollbar-color: #ff9800 #ffe0b2; */
+            }
+
+            /* Chrome/Edge/Safari */
+            .custom-collapse-content::-webkit-scrollbar {
+                width: 8px;
+            }
+            .custom-collapse-content::-webkit-scrollbar-track {
+                background: #ffe0b2;
+                border-radius: 10px;
+            }
+            .custom-collapse-content::-webkit-scrollbar-thumb {
+                background-color: #ff9800;
+                border-radius: 10px;
+                border: 2px solid #ffe0b2;
+            }
+            .custom-collapse-content::-webkit-scrollbar-thumb:hover {
+                background-color: #e65100;
+            }
+        }
+    }
+}
+
+  
+  
+  
+  

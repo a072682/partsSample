@@ -1,0 +1,66 @@
+/* 只影響 .react-navbar 導覽列 */
+.react-navbar {
+    height: 80px;
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  /* 品牌 Logo 樣式 */
+  .react-navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f1c40f !important;
+  }
+  
+  /* 導覽連結基本樣式 */
+  .react-navbar .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ecf0f1 !important;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover 效果 */
+  .react-navbar .nav-link:hover {
+    color: #1abc9c !important;
+    text-decoration: underline;
+  }
+  
+  /* Active 狀態強化 */
+  .react-navbar .nav-link.active {
+    color: #e67e22 !important;
+    font-weight: 700;
+    border-bottom: 2px solid #e67e22;
+  }
+  
+  /* 搜尋輸入欄強化 */
+  .react-navbar form.d-flex input.form-control {
+    border-radius: 30px;
+    padding: 0.6rem 1.2rem;
+    width: 220px;
+    border: 1px solid #1abc9c;
+    box-shadow: 0 2px 6px rgba(26, 188, 156, 0.3);
+    transition: all 0.2s ease;
+  }
+  
+  .react-navbar form.d-flex input.form-control:focus {
+    border-color: #16a085;
+    outline: none;
+    box-shadow: 0 0 6px rgba(22, 160, 133, 0.6);
+  }
+  
+  /* 搜尋按鈕樣式 */
+  .react-navbar form.d-flex .btn {
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .react-navbar form.d-flex .btn:hover {
+    background-color: #16a085;
+    color: #fff;
+  }
+  

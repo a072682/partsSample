@@ -1,0 +1,85 @@
+
+
+.detail-container{
+    border-radius: 12px;
+    width: 100%;
+    padding:24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 32px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2); /* 這就是陰影 */
+    .dk-header{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    .detail{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom:32px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #4b4b4b;
+            left: 0;
+            bottom: 0;
+        }
+        .detail-text{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #4b4b4b;
+        }
+        .detail-price{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #4b4b4b;
+        }
+    }
+    .total{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .total-text{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #4b4b4b;
+        }
+        .total-price{
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 1.2;
+            color: #000000;
+        }
+    }
+    .btn_text{
+        width: 100%;
+        button{
+            width: 100%;
+            border-radius:12px;
+            background-color: #0068ff;
+            color:#ffffff;
+            padding:16px 32px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .caption-text{
+            margin-top: 16px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #4b4b4b;
+        }   
+    }
+}

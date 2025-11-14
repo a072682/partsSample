@@ -1,0 +1,23 @@
+
+
+.切版tab-box{
+
+    .tab-item{
+
+        .tab-link{
+
+        }
+
+        .imgBox{
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            aspect-ratio: 700 / 570;
+            .imgSet{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

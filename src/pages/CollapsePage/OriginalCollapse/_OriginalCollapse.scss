@@ -1,0 +1,67 @@
+/* 客製化按鈕 */
+.custom-collapse-button {
+    /*按鈕本身設定*/
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff9800;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+  }
+  
+  /* 客製化Collapse展開內容 */
+.custom-collapse-content {
+    width: 500px;           /* 展開視窗寬度 */
+    height: 200px;          /* 固定高度 */
+    overflow-y: auto;       /* 超出高度時出現垂直滾動條 */
+    background-color: #ffe0b2;
+    color: #e65100;
+    font-size: 1.3rem;
+    border: 2px solid #ff9800;
+    padding: 1.5rem;
+    margin-top: 10px;
+    position: relative;
+    left: 50px;
+    
+    /* 設置自訂滾動條 */
+    /* scrollbar-width: thin;              */
+    /* Firefox - 滾動條窄一點 */
+    /*  auto（預設）	預設寬度（大概是一般常見的正常滾動條寬度）
+        thin	比預設更細（比較小的滾動條）
+        none	不顯示滾動條（滾動功能還在，但隱藏滾輪）*/
+    /* scrollbar-color: #ff0000 #1100ff;    */
+    /* Firefox - 滾輪顏色、軌道顏色 */
+  }
+  
+  /* Chrome, Edge, Safari 自訂滾動條 */
+  .custom-collapse-content::-webkit-scrollbar {
+    width: 25px;   
+    /* 滾動條寬度 */
+  }
+  
+  .custom-collapse-content::-webkit-scrollbar-track {
+    background: #00ff0d;    
+    /* 滾動條軌道顏色 */
+    border-radius: 10px;
+  }
+  
+  .custom-collapse-content::-webkit-scrollbar-thumb {
+    background-color: #00ffc8; 
+    /* 滾輪顏色 */
+    border-radius: 2px;
+    border: 2px solid #7b84ff; 
+    /* 滾輪外圍的空隙（讓滾輪有空心感） */
+  }
+  
+  .custom-collapse-content::-webkit-scrollbar-thumb:hover {
+    background-color: #ff00bf; 
+    /* 滑鼠滑到滾輪上時的顏色 */
+  }
+  
+  
+  /* 客製化容器，讓位置顯得更合理 */
+  .custom-collapse-container {
+    position: relative;
+  }
+  

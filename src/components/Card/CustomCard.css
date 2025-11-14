@@ -1,0 +1,99 @@
+.custom-card-with-decor {
+  width: 320px;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #fffbe6;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+
+.custom-card-body {
+  position: relative;
+  z-index: 1;
+  color: #5d4037;
+}
+
+.custom-card-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.custom-card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.custom-card-btn {
+  background-color: #ff9800;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-card-btn:hover {
+  background-color: #ef6c00;
+}
+
+/* 共用樣式：圓形圖片裝飾 */
+.circle-img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 0;
+  right: -50px; /* 往右側超出卡片 */
+}
+
+/* 各位置 */
+.top-right {
+  top: -50px;
+  background-image: url('https://picsum.photos/seed/a/100');
+}
+.center-right {
+  top: calc(50% - 50px);
+  background-image: url('https://picsum.photos/seed/b/100');
+}
+.bottom-right {
+  bottom: -50px;
+  background-image: url('https://picsum.photos/seed/c/100');
+}
+
+/* 左側圓形（使用 div + 定位） */
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* ✅ 左三個圓：直接給背景圖片 */
+.top-left {
+  top: -50px;
+  left: -50px;
+  background-image: url('https://picsum.photos/seed/left1/100');
+}
+
+.center-left {
+  top: calc(50% - 50px);
+  left: -50px;
+  background-image: url('https://picsum.photos/seed/left2/100');
+}
+
+.bottom-left {
+  bottom: -50px;
+  left: -50px;
+  background-image: url('https://picsum.photos/seed/left3/100');
+}

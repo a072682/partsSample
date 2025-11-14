@@ -1,0 +1,166 @@
+
+// 動畫設置
+@keyframes drop {
+    0%   { transform: translateY(0%); opacity: 0;}
+    /* 先比目標再多一點點（往下超過） */
+    50%  { transform: translateY(100%); opacity: 1;}
+    /* 最終定位在目標 */
+    100% { transform: translateY(90%); opacity: 1;}
+    //若沒設定 --rebound，就用預設 4px
+}
+
+/* 元件最外框 */
+.btnGroup{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    min-height: 120px;
+
+    /* 觸發按鈕 */
+    .btnSet{
+        position: relative;
+        z-index: 10;
+    }
+
+    /* 動畫群組01 */
+    .animationGroup{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        min-width: 300px;
+        min-height: 120px;
+        
+        transform: translateX(-50%);
+        z-index: 9;
+        overflow: hidden;
+
+        /* 動畫細項 */
+        .animationItem01,.animationItem02,.animationItem03,.animationItem04{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transform: translateY(0);
+        width: 100%;
+        height: 100%;
+        }
+
+        .animationItem01{ 
+            z-index: 9; 
+        }
+        .animationItem02{ 
+            z-index: 8; 
+        }
+        .animationItem03{ 
+            z-index: 7; 
+        }
+        .animationItem04{ 
+            z-index: 6; 
+        }
+        /* 動畫細項 */
+
+        
+        /* 動畫群組01 */
+        /* 按鈕觸發時，在 .animationGroup 上加 .play */
+        &.play {
+        overflow: visible;
+            /* 動畫細項 */
+            .animationItem01 {
+                animation: drop 1s ease forwards;
+                //動畫時間1s
+                animation-delay: 0s;
+            }
+            .animationItem02 {
+                
+                animation: drop 1s ease forwards;
+                animation-delay: 0.1s;
+            }
+            .animationItem03 {
+                
+                animation: drop 1s ease forwards;
+                animation-delay: 0.2s;
+            }
+            .animationItem04 {
+            
+                animation: drop 1s ease forwards;
+                animation-delay: 0.3s;
+            }
+            /* 動畫細項 */
+        }
+        /* 動畫群組01 */
+    }
+    /* 動畫群組01 */
+
+    /* 動畫群組02 */
+    .animationGroup2{
+        position: absolute;
+        top: 10%;
+        left: 51%;
+        min-width: 300px;
+        min-height: 120px;
+        transform: translateX(-50%);
+        z-index: 5;
+        overflow: hidden;
+
+        /* 動畫細項 */
+        .animationItem05,.animationItem06,.animationItem07,.animationItem08{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transform: translateY(0);
+        width: 100%;
+        height: 100%;
+        }
+
+        .animationItem05{ 
+            z-index: 5; 
+        }
+        .animationItem06{ 
+            z-index: 4; 
+        }
+        .animationItem07{ 
+            z-index: 3; 
+        }
+        .animationItem08{ 
+            z-index: 2; 
+        }
+        /* 動畫細項 */
+
+        /* 動畫群組02 */
+        /* 按鈕觸發時，在 .animationGroup 上加 .play */
+        &.play {
+        overflow: visible;
+
+            /* 動畫細項 */
+            .animationItem05 {
+                
+                animation: drop 0.6s ease forwards;
+                //動畫時間1s
+                animation-delay: 0s;
+            }
+            .animationItem06 {
+                
+                animation: drop 0.7s ease forwards;
+                animation-delay: 0.1s;
+            }
+            .animationItem07 {
+            
+                animation: drop 0.8s ease forwards;
+                animation-delay: 0.1s;
+            }
+            .animationItem08 {
+                
+                animation: drop 1s ease forwards;
+                animation-delay: 0.1s;
+            }
+            /* 動畫細項 */
+        }
+        /* 動畫群組02 */
+    }
+    /* 動畫群組02 */
+}
+/* 元件最外框 */

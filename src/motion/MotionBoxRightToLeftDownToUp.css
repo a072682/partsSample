@@ -1,0 +1,22 @@
+.sliding-up-box {
+    width: 300px;
+    height: 120px;
+    background-color: #fdcb6e;
+    color: #2d3436;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    position: absolute;
+    left: 50%; /* 搭配 transform 置中 */
+
+    bottom: 0;
+  }
+  
