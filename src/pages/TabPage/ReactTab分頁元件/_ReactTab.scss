@@ -22,15 +22,11 @@
         /* ─ 每個分頁項目（<Nav.Item class="tab-item">） ─ */
         .tab-item {
             list-style: none;          /* 保險：移除列表樣式 */
-            display: inline-flex;
-            align-items: stretch;
+            display: flex;
 
             /* ─ 分頁按鈕（<Nav.Link class="tab-link">） ─ */
             .tab-link {
                 position: relative;        /* 方便做底線/微裝飾 */
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
                 padding: 10px 14px;        /* 觸控友善 */
                 font-weight: 600;          /* 半粗體，易讀 */
                 font-size: 14px;

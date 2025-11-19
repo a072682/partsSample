@@ -46,25 +46,28 @@ export default function ReactTab() {
 
                 {/* Tab 選單區 */}
                 <Nav className='d-flex flex-row tab-box'>
+                    {/* 選項按鈕外層 */}
+                    <Nav.Item  className='tab-item'>
                     {
                         tabdata?.map((item)=>{
                             return(
                                 <>
-                                    {/* 選項按鈕外層 */}
-                                    <Nav.Item key={item.key} className='tab-item'>
+                                    
                                         {/* 選項按鈕本體 */}
-                                        <Nav.Link   className={`tab-link ${item.disabled ? 'is-disabled' : ''}`} 
+                                        <Nav.Link   key={item.key}
+                                                    className={`tab-link ${item.disabled ? 'is-disabled' : ''}`} 
                                                     aria-disabled={item.disabled} 
                                                     eventKey={item.key}>
                                             {item.title}
                                         </Nav.Link>
                                         {/* 選項按鈕本體 */}
-                                    </Nav.Item>
-                                    {/* 選項按鈕外層 */}
+                                    
                                 </>
                             )
                         })
                     }
+                    </Nav.Item>
+                    {/* 選項按鈕外層 */}
                 </Nav>
                 {/* Tab 選單區 */}
 
