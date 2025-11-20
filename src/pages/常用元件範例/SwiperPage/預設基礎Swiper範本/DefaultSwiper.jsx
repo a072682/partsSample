@@ -12,8 +12,8 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function DefaultSwiper() {
 
-    const [mainSwiper, setMainSwiper] = useState(null);
-    useEffect(()=>{console.log("更新",mainSwiper)},[mainSwiper])
+    const [swiperData, setSwiperData] = useState(null);
+    useEffect(()=>{},[swiperData])
 
     const paginationRef = useRef(null);
 
@@ -25,7 +25,7 @@ export default function DefaultSwiper() {
                 modules={[Navigation, Pagination]}//需要用到的模組
                 onSwiper={(swiper) => {
                     // 更新 state
-                    setMainSwiper({ ...swiper });
+                    setSwiperData({ ...swiper });
 
                     // 重新綁定 pagination 的 DOM
                     swiper.params.pagination.el = paginationRef.current;

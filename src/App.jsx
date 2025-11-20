@@ -1,6 +1,5 @@
 
 
-import ComponentShowcase from "./pages/ComponentShowcase"
 
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
 
   return (
     <>
-      <ComponentShowcase />
+      
     </>
   )
 }

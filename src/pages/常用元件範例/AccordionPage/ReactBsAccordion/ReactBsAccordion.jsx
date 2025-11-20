@@ -26,8 +26,8 @@ function ReactBsAccordion() {
   return (
     <div className="container my-5">
       {/* 預設樣式的 React-Bootstrap Accordion */}
-      <h3 className='mt-24 mb-24'>元件型預設手風琴項目(react)</h3>
-      <DefaultAccordion />
+      {/* <h3 className='mt-24 mb-24'>元件型預設手風琴項目(react)</h3>
+      <DefaultAccordion /> */}
 
 
       <h3 className='mt-24 mb-24'>元件型客製化手風琴項目(react)優先使用</h3>

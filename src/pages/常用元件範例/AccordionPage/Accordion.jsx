@@ -9,11 +9,11 @@ export default function Accordion() {
     <div className="container">
       <h1>Accordion</h1>
 
-      <section className="">
+      {/* <section className="">
         <OriginalAccordion />
       </section>
 
-      <hr />
+      <hr /> */}
 
       <section className="">
         <ReactBsAccordion />

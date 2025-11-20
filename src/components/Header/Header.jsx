@@ -62,6 +62,12 @@ function Header(){
                     </motion.div>
 
                     <motion.div variants={itemV}>
+                        <Link to="/常用元件範例" className='item'>
+                        <p className='text'>常用元件範例</p>
+                        </Link>
+                    </motion.div>
+
+                    <motion.div variants={itemV}>
                         <Link to="/animationCss" className='item'>
                         <p className='text'>CSS動畫說明</p>
                         </Link>
@@ -88,34 +94,6 @@ function Header(){
                     </motion.div>
 
                     <motion.div variants={itemV}>
-                        <Link to="/Accordion" className='item'>
-                        <p className='text'>Accordion</p>
-                        <p className='text'>管風琴元件</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/Dropdown" className='item'>
-                        <p className='text'>Dropdown</p>
-                        <p className='text'>展開元件</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/Tab" className='item'>
-                        <p className='text'>Tab</p>
-                        <p className='text'>Tab分頁元件</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/Collapse" className='item'>
-                        <p className='text'>Collapse</p>
-                        <p className='text'>摺疊功能</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
                         <Link to="/CommentSystem" className='item'>
                         <p className='text'>CommentSystem</p>
                         <p className='text'>留言室組件</p>
@@ -126,20 +104,6 @@ function Header(){
                         <Link to="/ShoppingCart" className='item'>
                         <p className='text'>ShoppingCart</p>
                         <p className='text'>購物車組件</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/Swiper" className='item'>
-                        <p className='text'>Swiper</p>
-                        <p className='text'>輪播功能</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/InputGroup" className='item'>
-                        <p className='text'>InputGroup</p>
-                        <p className='text'>輸入群組</p>
                         </Link>
                     </motion.div>
 

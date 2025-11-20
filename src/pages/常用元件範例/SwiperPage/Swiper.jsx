@@ -1,7 +1,7 @@
 
 
 
-import DefaultSwiper from './PackageSwiper/DefaultSwiper';
+import DefaultSwiper from './預設基礎Swiper範本/DefaultSwiper';
 import ThumbsSwiper from './Thumbs範例/ThumbsSwiper';
 import VideoSwiper from './影片Swiper/VideoSwiper';
 import EffectFadeSwiper from './淡入淡出版本/EffectFadeSwiper';

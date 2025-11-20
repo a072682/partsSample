@@ -1,0 +1,86 @@
+
+
+// 表單最外圍
+.formSet{
+    border: 1px solid #000000;
+    border-radius: 12px;
+    background-color: #474747;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 24px;
+    // 標題
+    .titleSer{
+        font-size: 36px;
+        color: #ffffff;
+    }
+    // 標題
+
+    //Input群組
+    .inputGroup{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 12px;
+        // Input標題
+        .labelSet{
+            display: block;
+            color: #ffffff;
+        }
+        // Input標題
+
+        // Input本體
+        .inputSet{
+            background-color: transparent;
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 10px;
+        }
+        // Input本體
+
+        //錯誤訊息本體
+        .errorMsg{
+            font-size: 20px;
+            color: #ff0000;
+        }
+        //錯誤訊息本體
+
+        //使用者名稱
+        &.username{
+
+        }
+        //使用者名稱
+
+        //email
+        &.email{
+
+        }
+        //email
+
+        //password
+        &.password{
+
+        }
+        //password
+    }
+    //Input群組
+
+    //表單送出按鈕
+    .formBtn{
+        width: 50%;
+        height: auto;
+        aspect-ratio: 5 / 1;
+        border: none;
+        border-radius: 8px;
+        background-color: #00fff26c;
+        color: #ffffff;
+    }
+    //表單送出按鈕
+    
+}
+// 表單最外圍

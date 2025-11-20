@@ -40,10 +40,10 @@ export default function ReactBsCollapse() {
     <div className="container my-5">
 
       {/* 預設 Collapse */}
-      <div className="mb-5">
+      {/* <div className="mb-5">
         <h4>Default-React-Collapse元件</h4>
         <DefaultCollapse />
-      </div>
+      </div> */}
 
       {/* 客製化 Collapse */}
       <div className="mb-5 custom-collapse-container">
@@ -52,13 +52,12 @@ export default function ReactBsCollapse() {
       </div>
 
       {/* 一次展開多個 Collapse */}
-      <div className="container my-5">
+      {/* <div className="container my-5">
         <h3>React-Collapse元件相關測試</h3>
         <button onClick={() => setOpen1(!open1)} className="btn btn-primary m-2">
           展開/收合 第一個
         </button>
         <Collapse in={open1}>
-          {/* 根據in決定展開的區塊 */}
           <div className="mt-2">
             <div className="card card-body">
               第一個內容
@@ -76,33 +75,33 @@ export default function ReactBsCollapse() {
             </div>
           </div>
         </Collapse>
-      </div>
+      </div> */}
 
       {/* //淡出效果 */}
-      <div className="container my-5">
-      <button
-        className="btn btn-warning"
-        onClick={handleToggle}
-        aria-controls="example-collapse-text"
-        aria-expanded={open}
-      >
-        客製化展開/收合（淡入淡出）
-      </button>
+      {/* <div className="container my-5">
+        <button
+          className="btn btn-warning"
+          onClick={handleToggle}
+          aria-controls="example-collapse-text"
+          aria-expanded={open}
+        >
+          客製化展開/收合（淡入淡出）
+        </button>
 
-      <Collapse in={open}>
-        <div className={`custom-collapse-wrapper ${visible ? 'show' : 'hide'}`}>
-          <div className="custom-collapse-content02">
-            這是可以滾動的內容。<br/>
-            這裡是淡入淡出的效果。<br/>
-            很多很多很多很多文字...<br/>
-            滾動滾動滾動...
+        <Collapse in={open}>
+          <div className={`custom-collapse-wrapper ${visible ? 'show' : 'hide'}`}>
+            <div className="custom-collapse-content02">
+              這是可以滾動的內容。<br/>
+              這裡是淡入淡出的效果。<br/>
+              很多很多很多很多文字...<br/>
+              滾動滾動滾動...
+            </div>
           </div>
-        </div>
-      </Collapse>
-    </div>
+        </Collapse>
+      </div> */}
 
-    {/* 垂直展開 */}
-      <div className="container my-5">
+      {/* 垂直展開 */}
+      {/* <div className="container my-5">
         <button className="btn btn-primary" onClick={() => setHorizontalOpen(!horizontalOpen)}>
           左右展開/收合
         </button>
@@ -116,7 +115,7 @@ export default function ReactBsCollapse() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </div>
 
