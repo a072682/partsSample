@@ -56,75 +56,78 @@ function ReactCustomDropdown() {
 
   return (
     <>
-      {/* 元件最外層 */}
-      <Dropdown className='Dropdown' show={show} onToggle={(isOpen) => setShow(isOpen)}>
+      <section className='ReactCustomDropdown'>
+        {/* 元件最外層 */}
+        <Dropdown className='CustomDropdown' show={show} onToggle={(isOpen) => setShow(isOpen)}>
 
-        {/* 元件標頭 */}
-        <Dropdown.Toggle className='DropdownHeader' as="div" onClick={() => {setShow(!show);setActiveMain(null)}}> 
-            {selectedValue}
-        </Dropdown.Toggle>
-        {/* 元件標頭 */}
+          {/* 元件標頭 */}
+          <Dropdown.Toggle className='DropdownHeader' as="div" onClick={() => {setShow(!show);setActiveMain(null)}}> 
+              {selectedValue}
+          </Dropdown.Toggle>
+          {/* 元件標頭 */}
 
-        {/* 元件本體 */}
-        <Dropdown.Menu className="triple-dropdown-menu">
-          {/* 內部第一層 */}
-          <div className="menu-column main-menu">
-            {
-              options.map((main, i) => (
-                /* 內部第一層選項設定 */
-                <button key={i} className='menu-btn' onClick={() => {
-                  setActiveMain(main.label);
-                  setActiveSub(null); // ✅ 切換主選單時重置子選單
-                }}>
-                  {main.label}
-                </button>
-                /* 內部第一層選項設定 */
-              ))
-            }
+          {/* 元件本體 */}
+          <Dropdown.Menu className="triple-dropdown-menu test">
+            {/* 內部第一層 */}
+            <div className="menu-column main-menu">
+              {
+                options.map((main, i) => (
+                  /* 內部第一層選項設定 */
+                  <button key={i} className='menu-btn' onClick={() => {
+                    setActiveMain(main.label);
+                    setActiveSub(null); // ✅ 切換主選單時重置子選單
+                  }}>
+                    {main.label}
+                  </button>
+                  /* 內部第一層選項設定 */
+                ))
+              }
 
-            {activeMain && (
-              /* 內部第二層 */
-              <div className="menu-column sub-menu">
-                {
-                  options.find(m => m.label === activeMain)?.children.map((sub, i) => (
-                    /* 內部第二層選項設定 */
-                    <button key={i} className='menu-btn' onClick={() => {
-                      setActiveSub(sub.label);
-                      setSelectedValue("請選擇發票資訊"); // ✅ 重新選擇中間層時重設已選
-                    }}>
-                      {sub.label}
-                    </button>
-                    /* 內部第二層選項設定 */
-                  ))
-                }
+              {activeMain && (
+                /* 內部第二層 */
+                <div className="menu-column sub-menu">
+                  {
+                    options.find(m => m.label === activeMain)?.children.map((sub, i) => (
+                      /* 內部第二層選項設定 */
+                      <button key={i} className='menu-btn' onClick={() => {
+                        setActiveSub(sub.label);
+                        setSelectedValue("請選擇發票資訊"); // ✅ 重新選擇中間層時重設已選
+                      }}>
+                        {sub.label}
+                      </button>
+                      /* 內部第二層選項設定 */
+                    ))
+                  }
 
-                {activeSub && (
-                  /* 內部第三層 */
-                  <div className="menu-column leaf-menu">
-                    {
-                      options
-                        .find(m => m.label === activeMain)
-                        ?.children.find(s => s.label === activeSub)
-                        ?.children.map((leaf, i) => (
-                          /* 內部第三層選項設定 */
-                          <button key={i} className='menu-btn leaf' onClick={() => handleSelect(activeMain, activeSub, leaf)}>
-                            {leaf}
-                          </button>
-                          /* 內部第三層選項設定 */
-                        ))
-                    }
-                  </div>
-                  /* 內部第三層 */
-                )}
-              </div>
-              /* 內部第二層 */
-            )}
-          </div>
-          {/* 內部第一層 */}
-        </Dropdown.Menu>
-        {/* 元件本體 */}
-      </Dropdown>
-      {/* 元件最外層 */}
+                  {activeSub && (
+                    /* 內部第三層 */
+                    <div className="menu-column leaf-menu">
+                      {
+                        options
+                          .find(m => m.label === activeMain)
+                          ?.children.find(s => s.label === activeSub)
+                          ?.children.map((leaf, i) => (
+                            /* 內部第三層選項設定 */
+                            <button key={i} className='menu-btn leaf' onClick={() => handleSelect(activeMain, activeSub, leaf)}>
+                              {leaf}
+                            </button>
+                            /* 內部第三層選項設定 */
+                          ))
+                      }
+                    </div>
+                    /* 內部第三層 */
+                  )}
+                </div>
+                /* 內部第二層 */
+              )}
+            </div>
+            {/* 內部第一層 */}
+          </Dropdown.Menu>
+          {/* 元件本體 */}
+        </Dropdown>
+        {/* 元件最外層 */}
+      </section>
+      
 
       <Accordion defaultActiveKey="" className="defaultReactAccordionContent my-24">
           {/* 不打開任何一個	<Accordion defaultActiveKey=""> */}

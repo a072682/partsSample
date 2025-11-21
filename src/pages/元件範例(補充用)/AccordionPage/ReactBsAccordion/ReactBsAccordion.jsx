@@ -8,7 +8,7 @@ import 'prismjs/components/prism-jsx';      // JSX 支援
 import 'prismjs/components/prism-markup';   // HTML 支援
 import dedent from 'dedent';//去除多餘空白保持縮排格式
 import DefaultAccordion from './DefaultAccordion/DefaultAccordion';
-import CustomAccordion from './CustomAccordion/CustomAccordion';
+import CustomAccordion from '../CustomAccordion/CustomAccordion';
 
 
 

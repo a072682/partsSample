@@ -1,6 +1,6 @@
 
 import CustomDropdown from "./CustomDropdown/CustomDropdown";
-import ReactCustomDropdown from "./ReactCustomDropdown/ReactCustomDropdown";
+import ReactCustomDropdown from "../../常用元件範例/DropdownPage/ReactCustomDropdown/ReactCustomDropdown";
 
 
 
@@ -8,13 +8,13 @@ import ReactCustomDropdown from "./ReactCustomDropdown/ReactCustomDropdown";
 export default function Dropdown() {
   return (
     <div className="container">
-      <h1>Dropdown</h1>
+      {/* <h1>Dropdown</h1>
 
       <section className="">
         <CustomDropdown />
       </section>
 
-      <hr />
+      <hr /> */}
 
       <section className="">
         <h4>ReactDropdown(優先使用)</h4>

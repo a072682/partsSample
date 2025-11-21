@@ -18,35 +18,38 @@ export default function CustomCollapse() {
 
     return (
         <>
-            {/* 元件最外圍 */}
-            <div className="CollapseGroup">
-                {/* 元件標頭 */}
-                <button
-                    className="btn btn-warning custom-collapse-button"
-                    onClick={() => setOpenCustom(!openCustom)}
-                    aria-controls="custom-collapse-text"
-                    aria-expanded={openCustom}
-                    >
-                    客製化展開/收合
-                </button>
-                {/* 元件標頭 */}
+            <section className="CustomCollapse">
+                {/* 元件最外圍 */}
+                <div className="CollapseGroup">
+                    {/* 元件標頭 */}
+                    <button
+                        className="btn btn-warning custom-collapse-button"
+                        onClick={() => setOpenCustom(!openCustom)}
+                        aria-controls="custom-collapse-text"
+                        aria-expanded={openCustom}
+                        >
+                        客製化展開/收合
+                    </button>
+                    {/* 元件標頭 */}
 
-                {/* 元件下拉本體 */}
-                <Collapse className="Collapse" in={openCustom}>
-                    {/* 內容外框 */}
-                    <div    className="custom-collapse-content-box" 
-                            style={{ overflow: 'hidden', transition: 'height 0.4s ease' }}>
-                        {/* 內容本體 */}
-                        <div id="custom-collapse-text" className="custom-collapse-content">
-                            這是客製化樣式的 React-Bootstrap Collapse 區塊。
+                    {/* 元件下拉本體 */}
+                    <Collapse className="Collapse" in={openCustom}>
+                        {/* 內容外框 */}
+                        <div    className="custom-collapse-content-box" 
+                                style={{ overflow: 'hidden', transition: 'height 0.4s ease' }}>
+                            {/* 內容本體 */}
+                            <div id="custom-collapse-text" className="custom-collapse-content">
+                                這是客製化樣式的 React-Bootstrap Collapse 區塊。
+                            </div>
+                            {/* 內容本體 */}
                         </div>
-                        {/* 內容本體 */}
-                    </div>
-                    {/* 內容外框 */}
-                </Collapse>
-                {/* 元件下拉本體 */}
-            </div>
-            {/* 元件最外圍 */}
+                        {/* 內容外框 */}
+                    </Collapse>
+                    {/* 元件下拉本體 */}
+                </div>
+                {/* 元件最外圍 */}
+            </section>
+            
 
             <Accordion defaultActiveKey="" className="defaultReactAccordionContent my-24">
                 {/* 不打開任何一個	<Accordion defaultActiveKey=""> */}
