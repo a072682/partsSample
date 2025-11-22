@@ -1,6 +1,6 @@
 import DefaultExample from "./基本範例/DefaultExample";
 import TriggerBoxAnimation from "./指定容器觸發範例/TriggerBoxAnimation";
-import Test from "./測試/test";
+import Test from "./測試/Test";
 import TriggerEnterAnimation from "./進場立即觸發/TriggerEnterAnimation";
 
 
