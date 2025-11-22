@@ -6,7 +6,7 @@ import 'prismjs/components/prism-markup';   // HTML 支援
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
 import dedent from 'dedent';//去除多餘空白保持縮排格式
-import Users from './users/users';
+import Users from './Users/Users';
 import User_list from './User_list/User_list';
 import User_Profiles from './User_Profiles/User_Profiles';
 import Carts_items from './Carts_items/Carts_items';
