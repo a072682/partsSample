@@ -8,7 +8,7 @@ import dedent from 'dedent';//去除多餘空白保持縮排格式
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import FileData from './fileData';
+import FileData from './FileData';
 import Env from './Env';
 import Db from './Db';
 import Google from './Google';
