@@ -1,0 +1,84 @@
+
+//自訂義input群組(帶按鈕)
+.NumberInputGroup{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 12px;
+  // 標題設定
+  .labelSet{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(15, 15, 15);
+  }
+  // 標題設定
+
+  //input整體設定
+  .NumberInputBodyBox{
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 12 / 1;
+    background-color: #ff8787;
+    //input主體
+    .inputBodySet{
+      width: 90%;
+      height: 100%;
+      background-color: transparent;
+      font-size: 24px;
+      font-weight: 700;
+      padding: 6px 12px;
+      color: #000000;
+      border-radius: 4px;
+    }
+    //input主體
+
+    .unitBox{
+      position: absolute;
+      top: 50%;
+      left: auto;
+      right: 10%;
+      font-size: 24px;
+      font-weight: 700;
+      transform: translate(-50%,-50%);
+    }
+
+    //按鈕區
+    .btnBox{
+      position: absolute;
+      top: 0%;
+      left: auto;
+      right: 0;
+      width: 10%;
+      height: 100%;
+      background-color: transparent;
+      border: 2px solid #000000;
+      .addBtnSet,.subBtnSet{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 24px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border: none;
+        padding: 0px;
+        background-color: transparent;
+        .iconSet{
+          font-size: 24px;
+        }
+      }
+      .addBtnSet{
+        top: 30%;
+      }
+      .subBtnSet{
+        top: 75%;
+      }
+    }
+    //按鈕區
+  }
+  //input整體設定
+}
+//自訂義input群組(帶按鈕)

@@ -1,0 +1,339 @@
+
+
+// 元件最外層
+.SwiperDoubleSampleBox{
+    width: 100%;
+    height: auto;
+    // 背景輪播顯示區塊
+    .viewBox{
+        width: 100%;
+        height: 50vh;
+        border: 2px solid #000000;
+        border-radius: 8px;
+        padding: 20px;
+        position: relative;
+
+        /* Tab 內容區 */
+        .tabContent {
+            
+            /* 內容外層（.tab-pane） */
+            .tabPane {
+                
+                /* 大圖輪播 */
+                .bgSwiper{
+                    width: calc(100% - 40px);
+                    height: calc(100% - 40px);
+                    position: absolute;
+                    top:20px;
+                    left: 20px;
+                    z-index: 1;
+                    //輪播本體
+                    .swiperSlide{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        /* 輪播片內容 */
+                        .videoSet{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                            width: 100%;
+                            height: 100%;
+                            .bgVideo {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover; // 跟背景圖 cover 一樣，充滿且裁切
+                            }
+                        }
+                        /* 輪播片內容 */
+
+                        //角色說明最外圍
+                        /* 背景 */
+                        .profileBox{
+                            position: absolute;
+                            top:0;
+                            left: 0;
+                            z-index: 2;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: start;
+                            align-items: start;
+                            //background-color: rgba(255, 0, 0, 0.5);
+                            .profileContentBox{
+                                position: absolute;
+                                top: 45%;
+                                left: 32%;
+                                width: 50%;
+                                height: auto;
+                                //background-color: rgb(0, 255, 255,0.5);
+                                transform: translate(-50%,-50%);
+                                @media (max-width: 1400px) {
+                                    top: 50%;
+                                    left: 35%;
+                                    width: 50%;
+                                }
+                                .profileImgBox{
+                                    width: 100%;
+                                    height: auto;
+                                    aspect-ratio: 936 / 459;
+                                    .imgSet{
+                                        max-width: 100%;
+                                        height: auto;
+                                        object-fit: cover;
+                                    }
+                                }
+
+                                .textBox{
+                                    width: 65%;
+                                    height: 100px;
+                                    overflow: hidden;
+                                    overflow-y: auto;   // ← 讓右側捲軸出現
+                                    overflow-x: hidden; // ← 水平不要捲軸
+                                    flex-shrink: 0;
+
+                                    // 捲軸的寬度
+                                    &::-webkit-scrollbar {
+                                        width: 8px;
+                                    }
+
+                                    // 捲軸的軌道（背景）
+                                    &::-webkit-scrollbar-track {
+                                        background: transparent;
+                                        border-radius: 4px;
+                                    }
+
+                                    // 捲軸本體（可以拉動的部分）
+                                    &::-webkit-scrollbar-thumb {
+                                        background: #999;
+                                        border-radius: 4px;
+                                    }
+
+                                    // 滑鼠 hover 在捲軸上
+                                    &::-webkit-scrollbar-thumb:hover {
+                                        background: #999;
+                                    }
+                                    .textSet{
+                                        font-size: 16px;
+                                        color:rgb(175, 175, 175);
+                                    }
+                                }
+                            }
+                        }
+                        /* 背景 */
+                        //角色說明最外圍
+                    }
+                    //輪播本體
+                }
+                /* 大圖輪播 */
+            }
+        }
+        /* Tab 內容區 */
+
+    }
+    // 背景輪播顯示區塊
+
+    .box{
+        //tab顯示區塊
+        .tabViewBox{
+            width: 40%;
+            height: auto;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            padding: 10px;
+
+            /* Tab 選單區 */
+            .tabBox {
+                width: 100%;
+                height: 100%;
+                /* 選項按鈕外層 */
+                .tabItem {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 24px;
+                    /* 選項按鈕本體 */
+                    .tabLink {
+                        
+                        &.tabBtn01{
+                            width: 20%;
+                            height: auto;
+                            aspect-ratio: 83 / 66;
+                            background-position: center 0;      /* 左上角 */
+                            background-size: 100% 100%;    /* 寬度填滿，高度等比 */
+                            background-repeat: no-repeat;
+                            background-color: transparent;
+                            padding: 0px;
+                            border: none;
+                            background-image: url('/images/swiper/背景圖連結縮圖範例/01.png');
+                        }
+
+                        &.tabBtn02{
+                            width: 20%;
+                            height: auto;
+                            aspect-ratio: 83 / 66;
+                            background-position: center 0;      /* 左上角 */
+                            background-size: 100% 100%;    /* 寬度填滿，高度等比 */
+                            background-repeat: no-repeat;
+                            background-color: transparent;
+                            padding: 0px;
+                            border: none;
+                            background-image: url('/images/swiper/背景圖連結縮圖範例/02.png');
+                        }
+
+                        /* disabled 狀態 */
+                        &.disabled {
+                            opacity: 0.5;
+                            cursor: not-allowed;
+                            pointer-events: none;
+                        }
+                    }
+                    /* 選項按鈕本體 */
+                }
+                /* 選項按鈕外層 */
+            }
+            /* Tab 選單區 */
+        }
+        //tab顯示區塊
+
+        //縮圖顯示區塊
+        .thumbViewBox{
+            width: 40%;
+            height: auto;
+            aspect-ratio: 4 / 1;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            padding: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            // 左右案件設定
+            .prevBtn,.nextBtn{
+                display: none;
+                position: absolute;
+                transform: translateY(-50%);
+                top:50%;
+                width: 15%;
+                height: auto;
+                aspect-ratio: 54 / 52;
+                background-position: center 0;      /* 左上角 */
+                background-size: 100% 200%;    /* 寬度填滿，高度等比 */
+                background-repeat: no-repeat;
+                background-color: transparent;
+                padding: 0px;
+                border: none;
+                
+                &.active{
+                    display: block;
+                }
+                &:hover{
+                    background-position-y: 100%;
+                }
+                &:disabled {
+                    background-position-y: 0%;
+                    opacity: 0.5;
+                }
+            }
+            .prevBtn{
+                left: 0%;
+                background-image: url('/images/swiper/背景圖連結縮圖範例/factionsPrev.png');
+            }
+            .nextBtn{
+                left: auto;
+                right: 0%;
+                background-image: url('/images/swiper/背景圖連結縮圖範例/factionsNext.png');
+            }
+            // 左右案件設定
+
+            // 縮圖資料顯示區
+            .thumbBox{
+                width: 70%;
+                height: 100%;
+                border: 2px solid red;
+                position: relative;
+                /* Tab 內容區 */
+                .tabContent {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0px;
+                    /* 內容外層 */
+                    .tabPane {
+                        width: 100%;
+                        height: 100%;
+                        
+                        /* 縮圖輪播 */
+                        .thumbsSwiper{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            pointer-events: auto;
+                            //輪播本體
+                            .swiper-slide.swiperSlide{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                /* 輪播片內容 */
+                                .imgBox{
+                                    width: 100%; // 根據圖片大小調整
+                                    height: auto;
+                                    object-fit: cover;
+                                    aspect-ratio: 191 / 86;
+                                    background-color: transparent;
+                                    background-position: center 0;      /* 左上角 */
+                                    background-size: 100% 200%;    /* 寬度填滿，高度等比 */
+                                    background-repeat: no-repeat;
+                                    border: 2px solid #949494;
+                                    padding: 0px;
+                                    transition: transform 0.2s ease;
+                                    
+                                    &:hover {
+                                        background-position-y: 100%;
+                                    }
+                                }
+                                /* 輪播片內容 */
+
+                                // 被選重的輪播片
+                                &.swiper-slide-active{
+                                    /* 輪播片內容 */
+                                    .imgBox{
+                                        width: 100%; // 根據圖片大小調整
+                                        // max-width: 191px;
+                                        aspect-ratio: 191 / 86;
+                                        background-color: transparent;
+                                        background-position: center 0;      /* 左上角 */
+                                        background-position-y: 100%;
+                                        background-size: 100% 200%;    /* 寬度填滿，高度等比 */
+                                        background-repeat: no-repeat;
+                                        padding: 0px;
+                                        transition: transform 0.2s ease;
+                                        border: 2px solid #ffffff;
+                                    }
+                                    /* 輪播片內容 */
+                                }
+                                // 被選重的輪播片
+                            }
+                            //輪播本體
+                        }
+                        /* 縮圖輪播 */
+                    }
+                    /* 內容外層 */
+                }
+                /* Tab 內容區 */
+            }
+            // 縮圖資料顯示區
+        }
+        //縮圖顯示區塊
+    }   
+}
+// 元件最外層
+

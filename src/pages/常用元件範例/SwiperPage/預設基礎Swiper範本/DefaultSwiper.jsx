@@ -1,6 +1,6 @@
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import './_DefaultSwiper.scss'; // 引入強化樣式
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
@@ -26,7 +26,11 @@ export default function DefaultSwiper() {
             {/* 元件最外圍 */}
             <Swiper
                 className='DefaultSwiper'
-                modules={[Navigation, Pagination]}//需要用到的模組
+                modules={[Navigation, Pagination, Autoplay]}//需要用到的模組
+                autoplay={{
+                    delay: 3000,        // 每 3 秒換一張
+                    disableOnInteraction: false, // 滑動後仍然會繼續自動播放
+                }}
                 onSwiper={(swiper) => {
                     // 更新 state
                     setSwiperData({ ...swiper });

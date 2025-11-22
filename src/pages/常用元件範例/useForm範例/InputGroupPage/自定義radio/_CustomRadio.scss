@@ -1,0 +1,68 @@
+
+// 元件最外層
+.CustomRadioBox{
+
+    // radio群組設定
+    .radioBox{
+
+        //input本體
+        input[type="radio"] {
+            display: none; /* 隱藏 radio 按鈕 */
+        }
+        
+        //點選 radio 時，顯示 ::before
+        //:checked：選中狀態
+        //+：相鄰兄弟選擇器（label 緊貼著 input）
+        input[type="radio"]:checked + .customCheckoutLabel::before {
+            display: block;
+        }
+        //input本體
+
+    
+        //label本體
+        .customCheckoutLabel {
+            color: #000000;
+            padding-left: 28px;
+            //左邊留出空間
+            cursor: pointer;
+            position: relative;
+
+            /*自訂樣式的圓形 radio 樣式*/
+            /* 基本的 ::before 和 ::after 設置 */
+            &::after, &::before {
+                content: "";
+                top: 50%;
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            //設定外框
+            &::after {
+                left: 0px;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                border: 1px solid #000000; /* 設定邊框顏色 */
+            }
+            //設定外框
+
+            // 設定圓心
+            &::before {
+                display: none;
+                left: 10px;
+                transform: translate(-50%, -50%);
+                width: 14px;
+                height: 14px;
+                background-color: #000000; /* 設定圓心顏色 */
+            }
+            // 設定圓心
+        }
+        //label本體
+    }
+    // radio群組設定
+}
+// 元件最外層
+
+
+
+

@@ -1,5 +1,5 @@
 import { Tab, Nav } from 'react-bootstrap';//宣告元件
-import { useState } from 'react';//宣告狀態
+import { useEffect, useState } from 'react';//宣告狀態
 import './_常用元件範例.scss';//引入指定樣式
 import CustomAccordion from './AccordionPage/CustomAccordion/CustomAccordion';
 import CustomCollapse from './CollapsePage/CustomCollapse/CustomCollapse';
@@ -14,6 +14,8 @@ import SwiperSample from './SwiperPage/Swiper';
 export default function 常用元件範例() {
 
     const [activeTab, setActiveTab] = useState('管風琴');//預設開啟的頁面
+
+    
 
     const tabdata = [ //將資料分離讓程式碼可以用.map讓程式碼更加簡潔
         {
@@ -37,7 +39,7 @@ export default function 常用元件範例() {
         {
             title:"輪播片元件",
             key:"輪播片",
-            pageData:<SwiperSample />,
+            pageData:<SwiperSample activeTab={activeTab}/>,
             disabled: false,
         },
         {
@@ -98,7 +100,11 @@ export default function 常用元件範例() {
                                         key={item.key} 
                                         eventKey={item.key}
                                     >
-                                        {item.pageData}
+                                        {
+                                            item.key === "輪播片"? 
+                                            (activeTab === "輪播片" && <SwiperSample />)
+                                            : item.pageData
+                                        }
                                     </Tab.Pane>
                                     /* 內容外層 */
                                     

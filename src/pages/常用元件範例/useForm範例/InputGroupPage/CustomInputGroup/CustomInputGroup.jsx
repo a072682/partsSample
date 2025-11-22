@@ -7,14 +7,6 @@ export default function CustomInputGroup() {
     //#region
     //#endregion
 
-
-        //付款方式狀態
-        const [selectedPayment, setSelectedPayment] = useState("");
-        // 2️⃣ 處理選擇付款方式的變化
-        const handlePaymentChange = (event) => {
-            setSelectedPayment(event.target.value);
-        };
-
         //#region 復數資料勾選input設定
             // 1) 假資料（你之後可換成 Redux/props/後端資料）
             const [items, setItems] = useState([
@@ -103,98 +95,8 @@ export default function CustomInputGroup() {
         <div className="container">
             <div className='row'>
                 <div className='col'>
-                    <h3>自定義radio</h3>
-                    <div className="card rounded-0">
-                        <input  id="salutation01" 
-                                type="radio" 
-                                name="salutation" 
-                                value="男士" 
-                                checked={selectedPayment === "男士"} 
-                                onChange={handlePaymentChange}/>
-                        <label htmlFor="salutation01" className="mb-0 custom-checkout-label ">
-                            男士
-                        </label>
-                    </div>
-                    
-                    <div className="card rounded-0">
-                        <input  id="salutation02" 
-                                type="radio" 
-                                name="salutation" 
-                                value="女士" 
-                                checked={selectedPayment === "女士"} 
-                                onChange={handlePaymentChange}/>
-                        <label htmlFor="salutation02" className="mb-0 custom-checkout-label">
-                            女士
-                        </label>
-                    </div>
-                    
-
-                    <div className="card rounded-0">
-                        <div className="card-header bg-white border-0 py-3" id="heading2">
-                            <input
-                                id="pay02"
-                                type="radio"
-                                name="payment"
-                                value="Apple Pay"
-                                checked={selectedPayment === "Apple Pay"}
-                                onChange={handlePaymentChange}
-                                data-bs-toggle="collapse"
-                                data-bs-target="#creditCardInputTest"
-                                aria-expanded={selectedPayment === "Apple Pay"}
-                                aria-controls="creditCardInputTest"
-                            />
-                            <label htmlFor="pay02" className="mb-0 position-relative custom-checkout-label">
-                                Apple Pay
-                            </label>
-                        </div>
-                    </div>
-
-                    <Collapse in={selectedPayment === "Apple Pay"}>
-                        <div id="creditCardInputTest" className="card card-body mt-2 custom-collapse">
-                            <label htmlFor="creditCardNumber" className="form-label">
-                                信用卡號碼
-                            </label>
-                            <input
-                                type="text"
-                                id="creditCardNumber"
-                                name="creditCardNumber"
-                                className="form-control"
-                                placeholder="請輸入信用卡號"
-                            />
-                        </div>
-                    </Collapse>
-
-                    <div className="card rounded-0">
-                        <div
-                        className="card-header bg-white border-0 py-3"
-                        id="heading3"
-                        >
-                            <input  id="pay03" 
-                                    type="radio" 
-                                    name="payment" 
-                                    value="LINE Pay" 
-                                    checked={selectedPayment === "LINE Pay"} 
-                                    onChange={handlePaymentChange}/>
-                            <label htmlFor="pay03" className="mb-0 position-relative custom-checkout-label">
-                                LINE Pay
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className='row'>
-                <div className='col'>
                     <div className="ShoppingCartItem">
                         <div className="shopping-cart">
-
-                            <h3>空產品頁面</h3>
-                            <div className="noProduct">
-                                <img src="https://via.placeholder.com/160x120?text=No+Items" alt="想放入想放的圖片" />
-                                <p>購物車還沒有商品，立即逛逛！</p>
-                                <button>前往首頁</button>
-                            </div>
-
-
                             <h3>購物車資訊頁面</h3>
                             <div className="form-check">
                             {/* 資訊頁面整體區塊 */}
@@ -260,18 +162,18 @@ export default function CustomInputGroup() {
                                     onChange={() => toggleSelectOne(product.id)}
                                     />
                                     <div className="product-box">
-                                    <div className="img-box">
-                                        <img src={product.img} alt={product.title} />
-                                        <p>{product.title}</p>
-                                    </div>
-                                    <div className="price-box">
-                                        <p className="price-text">NT$ {product.price.toLocaleString()}</p>
-                                    </div>
-                                    <div className="btn-box">
-                                        <button type="button" className="product-btn" onClick={() => handleDelete(product.id)}>
-                                        刪除
-                                        </button>
-                                    </div>
+                                        <div className="img-box">
+                                            <img src={product.img} alt={product.title} />
+                                            <p>{product.title}</p>
+                                        </div>
+                                        <div className="price-box">
+                                            <p className="price-text">NT$ {product.price.toLocaleString()}</p>
+                                        </div>
+                                        <div className="btn-box">
+                                            <button type="button" className="product-btn" onClick={() => handleDelete(product.id)}>
+                                            刪除
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 ))}

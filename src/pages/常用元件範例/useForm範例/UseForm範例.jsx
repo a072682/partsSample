@@ -11,6 +11,9 @@ import Prism from 'prismjs';                // 核心功能
 import 'prismjs/components/prism-jsx';      // JSX 支援
 import 'prismjs/components/prism-markup';   // HTML 支援
 import dedent from 'dedent';//去除多餘空白保持縮排格式
+import InputGroup from './InputGroupPage/InputGroup';
+
+
 
 
 export default function UseForm() {
@@ -18,8 +21,17 @@ export default function UseForm() {
     //#region
     //#endregion
 
+    //#region 假設的外部資料
+    const[inputData,setInputData] = useState({
+        username:"aaa",
+        email:"aaa@aaa.aaa",
+    })
+    //#endregion
+
+    //#region 儲存表格輸出資料
     const[formData, setFormData] = useState(null);
     useEffect(()=>{},[formData]);
+    //#endregion
 
     //#region 初始化 useForm
     const {
@@ -31,7 +43,22 @@ export default function UseForm() {
         // 收集驗證錯誤
         reset           
         // 重置表單
-    } = useForm();
+    } = useForm({
+            //初始資料
+            defaultValues: {
+                username: "",
+                email: "",
+            }
+        }
+    );
+    //#endregion
+
+    //#region 用 useEffect 把外部資料塞入 RHF
+    useEffect(() => {
+        if (inputData) {
+            reset(inputData); // 直接把外部資料注入表單
+        }
+    }, [inputData, reset]);
     //#endregion
 
     //#region 表單送出的行為（驗證通過後的階段）
@@ -425,6 +452,8 @@ export default function UseForm() {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
+
+            <InputGroup />,
         </>
         
     );

@@ -1,0 +1,116 @@
+
+// 最外圍
+.ExampleBox{
+  border: 1px solid #000000;
+  padding: 30px;
+
+  //自訂義input群組
+  .inputGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &.custom{
+
+        //自訂義label標題
+        .customLabel {
+          font-size: 16px;
+          font-weight: 600;
+          color: #4a148c;
+        }
+        //自訂義label標題
+
+        //自訂義input
+        .customInput{
+          padding: 16px;
+          font-size: 16px;
+          border: 2px solid #ba68c8;
+          border-radius: 8px;
+          background-color: #fffafc;
+          color: #4a148c;
+          box-shadow: none;
+          outline: none;
+
+          //input的placeholder字體顏色
+          &::placeholder{
+            color: #ce93d8;
+          }
+          //input的placeholder字體顏色
+
+          //點擊input時觸發的樣式
+          &:focus{
+            border: 2px solid #7b1fa2;
+          }
+          //點擊input時觸發的樣式
+        }
+        //自訂義input
+      }
+      
+  }
+  //自訂義input群組
+
+  // 搜尋欄範例
+  .searchBar {
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
+    background-color: #ffffff; // 白色底
+    border: 1px solid #ccc; // 淺灰框
+    box-shadow: none;
+    outline: none;
+    border-radius: 999px; // 全圓
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    //input區塊
+    .searchInput {
+      width: 100%;
+      height: 100%;
+      padding-left: 16px;
+      font-size: 16px;
+      border: none;
+      background: transparent;
+      &::placeholder {
+        color: #888; // placeholder 顏色
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+    //input區塊
+
+    //按鈕區塊
+    .searchBtn {
+      width: 50px;
+      height: 100%;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #444;
+
+      &:hover {
+        background-color: #4e4e4e; // hover 微亮
+
+        .iconSet{
+          color: #ffffff;
+        }
+      }
+    }
+    //按鈕區塊
+  }
+  // 搜尋欄範例
+
+  
+}
+// 最外圍
+
+
+
+  
