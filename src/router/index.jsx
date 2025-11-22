@@ -15,12 +15,11 @@ import ChartTest from "../pages/Chart/Chart";
 import VerifyEmailPage from "../pages/ApiPage/VerifyEmailPage";
 import DataBase from "../pages/DataBase/DataBase";
 import D3 from "../pages/D3/D3";
-import AnimationCss from "../pages/AnimationCss/animationCss";
 import WebInfrastructure from "../pages/WebInfrastructure/WebInfrastructure";
 import FramerMotion from "../pages/FramerMotion/FramerMotion";
 import 切版 from "../pages/切版/切版";
 import 常用元件範例 from "../pages/常用元件範例/常用元件範例";
-
+import AnimationCss from "../pages/AnimationCss/AnimationCss";
 
 
 const router = createHashRouter([ //createHashRouter為建立router的方法
