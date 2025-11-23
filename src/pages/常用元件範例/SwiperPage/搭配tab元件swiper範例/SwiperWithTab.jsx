@@ -189,7 +189,7 @@ export default function SwiperWithTab() {
                                                         slidesPerView={1}//顯示的輪播片數量
                                                         centeredSlides={true}//輪播片置中
                                                         loop={true}//開啟輪播片循環
-                                                        spaceBetween={8}//輪播片間隔距離(單位:px)
+                                                        spaceBetween={8}//輪播片間隔距離(單位:px) 
                                                     >
                                                     {item.swiperImgData?.map((imgData,index) => (
                                                         // 輪播片本體

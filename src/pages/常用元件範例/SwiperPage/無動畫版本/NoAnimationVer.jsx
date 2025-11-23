@@ -1,7 +1,7 @@
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import './_DefaultSwiper.scss'; // 引入強化樣式
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import './_noAnimationVer.scss'; // 引入強化樣式
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
 import 'prismjs/components/prism-jsx';      // JSX 支援
@@ -10,7 +10,7 @@ import dedent from 'dedent';//去除多餘空白保持縮排格式
 import { Accordion } from 'react-bootstrap';
 import { useEffect, useRef, useState } from 'react';
 
-export default function DefaultSwiper() {
+export default function NoAnimationVer() {
 
     // 儲存swiper數據資料狀態宣告
     const [swiperData, setSwiperData] = useState(null);
@@ -25,8 +25,8 @@ export default function DefaultSwiper() {
         <>
             {/* 元件最外圍 */}
             <Swiper
-                className='DefaultSwiper'
-                modules={[Navigation, Pagination, Autoplay]}//需要用到的模組
+                className='noAnimationSwiper'
+                modules={[Navigation, Pagination, Autoplay, EffectFade]}//需要用到的模組
                 autoplay={{
                     delay: 3000,        // 每 3 秒換一張
                     disableOnInteraction: false, // 滑動後仍然會繼續自動播放
@@ -46,7 +46,10 @@ export default function DefaultSwiper() {
                 onSlideChange={(swiper) => setSwiperData({ ...swiper })}
                 slidesPerView={1}//顯示的輪播片數量
                 centeredSlides={true}//輪播片置中
-                loop={true}//開啟輪播片循環 
+                loop={false}//關閉loop
+                rewind={true}//開啟循環
+                speed={0}//動畫時間為0確保瞬間切換
+                effect="fade"//搭配瞬間切換效果
                 spaceBetween={8}//輪播片間隔距離(單位:px)
                 pagination={{
                     //讓頁碼按鈕可以被點擊
@@ -121,8 +124,8 @@ export default function DefaultSwiper() {
                                         `
                                         import 'swiper/css';//宣告基礎樣式
                                         import { Swiper, SwiperSlide } from 'swiper/react';//宣告元件
-                                        import { Navigation, Pagination } from 'swiper/modules';//宣告使用的模組
-                                        import './_DefaultSwiper.scss'; //讀取樣式
+                                        import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';//宣告使用的模組
+                                        import './_noAnimationVer.scss'; //讀取樣式
                                         
                                         // 元件前置宣告
                                         // 放置於return上方
@@ -140,8 +143,12 @@ export default function DefaultSwiper() {
                                         // 放置於return下方
                                         {/* 元件最外圍 */}
                                         <Swiper
-                                            className='DefaultSwiper'
-                                            modules={[Navigation, Pagination]}//需要用到的模組
+                                            className='noAnimationSwiper'
+                                            modules={[Navigation, Pagination, Autoplay, EffectFade]}//需要用到的模組
+                                            autoplay={{
+                                                delay: 3000,        // 每 3 秒換一張
+                                                disableOnInteraction: false, // 滑動後仍然會繼續自動播放
+                                            }}
                                             onSwiper={(swiper) => {
                                                 // 更新 state
                                                 setSwiperData({ ...swiper });
@@ -154,10 +161,13 @@ export default function DefaultSwiper() {
                                                 swiper.pagination.render();
                                                 swiper.pagination.update();
                                             }}
-                                            onSlideChange={(swiper) => setMainSwiper({ ...swiper })}
+                                            onSlideChange={(swiper) => setSwiperData({ ...swiper })}
                                             slidesPerView={1}//顯示的輪播片數量
                                             centeredSlides={true}//輪播片置中
-                                            loop={true}//開啟輪播片循環
+                                            loop={false}//關閉loop
+                                            rewind={true}//開啟循環
+                                            speed={0}//動畫時間為0確保瞬間切換
+                                            effect="fade"//搭配瞬間切換效果
                                             spaceBetween={8}//輪播片間隔距離(單位:px)
                                             pagination={{
                                                 //讓頁碼按鈕可以被點擊
@@ -225,7 +235,8 @@ export default function DefaultSwiper() {
                                     dedent(
                                         `
                                         /* 元件最外圍 */
-                                        .swiper{
+                                        .noAnimationSwiper{
+                                            width: 100%;
                                             position: relative;
                                             height: 50vh;
                                             //輪播本體

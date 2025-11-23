@@ -5,6 +5,8 @@ import DefaultSwiper from './預設基礎Swiper範本/DefaultSwiper';
 import EffectFadeSwiper from './淡入淡出版本/EffectFadeSwiper';
 import SwiperWithTab from './搭配tab元件swiper範例/SwiperWithTab';
 import SwiperDoubleSample from './大圖連結縮圖版本/SwiperDoubleSample';
+import NoAnimationVer from './無動畫版本/noAnimationVer';
+
 
 
 export default function SwiperSample() {
@@ -15,6 +17,9 @@ export default function SwiperSample() {
                 <h3>預設Swiper範例</h3>
                 <DefaultSwiper />
                 <hr />
+                <h3>無動畫版本</h3>
+                <NoAnimationVer />
+                <hr />
                 <h3>淡入淡出Swiper範例</h3>
                 <EffectFadeSwiper />
                 <hr />
@@ -23,6 +28,7 @@ export default function SwiperSample() {
                 <hr />
                 <h3>縮圖swiper連結背景swiper範例</h3>
                 <SwiperDoubleSample/>
+                
             </div>
         </div>
     </div>
