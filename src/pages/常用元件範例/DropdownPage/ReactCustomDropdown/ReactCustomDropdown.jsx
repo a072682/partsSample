@@ -38,7 +38,7 @@ function ReactCustomDropdown() {
                     show={show} onToggle={(isOpen) => setShow(isOpen)}
           >
             {/* 元件標頭 */}
-            <Dropdown.Toggle className='DropdownHeader' as="div" onClick={() => {setShow(!show);setActiveMain(null)}}> 
+            <Dropdown.Toggle className='DropdownHeader' as="div" onClick={() => {setShow(!show);}}> 
                 {/* 要放置的元件 */}
                 <div className='key'>
                   放置的元件
