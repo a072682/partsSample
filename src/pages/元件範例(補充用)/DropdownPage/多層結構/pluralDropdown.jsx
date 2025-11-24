@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './_ReactCustomDropdown.scss';
+import './_pluralDropdown.scss';
 import { Accordion, Dropdown } from 'react-bootstrap';
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
@@ -8,68 +8,128 @@ import 'prismjs/components/prism-markup';   // HTML 支援
 import dedent from 'dedent';//去除多餘空白保持縮排格式
 
 
-function ReactCustomDropdown() {
+function pluralDropdown() {
 
   //元件判斷是否展開狀態
   const [show, setShow] = useState(false);
-  useEffect(()=>{},[show])
   //元件判斷是否展開狀態
+
+  //元件標頭狀態
+  const [selectedValue, setSelectedValue] = useState("標頭內容");
+  //元件標頭狀態
+  
+  //元件內部第二層是否展開判斷狀態
+  const [activeMain, setActiveMain] = useState(null);
+  //元件內部第二層是否展開判斷狀態
+
+  //元件內部第三層是否展開判斷狀態
+  const [activeSub, setActiveSub] = useState(null);
+  //元件內部第三層是否展開判斷狀態
 
   //元件展開內容
   const options = [
     {
       label: "第一層選項1",
+      children: [
+        { label: "第二層選項1", children: ["第三層選項1", "第三層選項2", "第三層選項3"] },
+        { label: "第二層選項2", children: ["第三層選項4", "第三層選項5", "第三層選項6"] }
+      ]
     },
     {
       label: "第一層選項2",
+      children: [
+        { label: "第二層選項3", children: ["第三層選項7", "第三層選項8", "第三層選項9"] },
+        { label: "第二層選項4", children: ["第三層選項10", "第三層選項11", "第三層選項12"] }
+      ]
     }
   ];
   //元件展開內容
 
-  
+  const handleSelect = (main, sub, leaf) => {
+    setSelectedValue(`${main} > ${sub} > ${leaf}`);
+    setShow(false);
+    setActiveMain(null);
+    setActiveSub(null);
+  };
+
+  useEffect(()=>{},[show])
 
   return (
     <>
       <section className='ReactCustomDropdown'>
-        <div className='testDropdownBox'>
-          <p>測試用最外層</p>
-          {/* 元件最外層 */}
-          <Dropdown className='CustomDropdown' 
-                    show={show} onToggle={(isOpen) => setShow(isOpen)}
-                    data-bs-display="static"
-          >
-            {/* 元件標頭 */}
-            <Dropdown.Toggle className='DropdownHeader' as="div" onClick={() => {setShow(!show);setActiveMain(null)}}> 
-                {/* 要放置的元件 */}
-                <div className='key'>
-                  放置的元件
-                </div>
-                {/* 要放置的元件 */}
-            </Dropdown.Toggle>
-            {/* 元件標頭 */}
+        {/* 元件最外層 */}
+        <Dropdown className='CustomDropdown' show={show} onToggle={(isOpen) => setShow(isOpen)}>
 
-            {/* 元件本體 */}
-            <Dropdown.Menu  className="dropdownMenuSet">
+          {/* 元件標頭 */}
+          <Dropdown.Toggle className='DropdownHeader' as="div" onClick={() => {setShow(!show);setActiveMain(null)}}> 
+              {/* 要放置的元件 */}
+              <div className='key'>
+                放置的元件
+              </div>
+              {/* 要放置的元件 */}
+          </Dropdown.Toggle>
+          {/* 元件標頭 */}
+
+          {/* 元件本體 */}
+          <Dropdown.Menu className="triple-dropdown-menu">
+            {/* 內部第一層 */}
+            <div className="menu-column main-menu">
               {
-                options.map((main, index) => (
+                options.map((main, i) => (
                   /* 內部第一層選項設定 */
-                  <button key={index} 
-                          className='menuItemSet' 
-                          onClick={() => {
-                            setShow(!show);
-                          }}
-                  >
+                  <button key={i} className='menu-btn' onClick={() => {
+                    setActiveMain(main.label);
+                    setActiveSub(null); // ✅ 切換主選單時重置子選單
+                  }}>
                     {main.label}
                   </button>
                   /* 內部第一層選項設定 */
                 ))
               }
-            </Dropdown.Menu>
-            {/* 元件本體 */}
-          </Dropdown>
-          {/* 元件最外層 */}
-        </div>
-        
+
+              {activeMain && (
+                /* 內部第二層 */
+                <div className="menu-column sub-menu">
+                  {
+                    options.find(m => m.label === activeMain)?.children.map((sub, i) => (
+                      /* 內部第二層選項設定 */
+                      <button key={i} className='menu-btn' onClick={() => {
+                        setActiveSub(sub.label);
+                        setSelectedValue("請選擇發票資訊"); // ✅ 重新選擇中間層時重設已選
+                      }}>
+                        {sub.label}
+                      </button>
+                      /* 內部第二層選項設定 */
+                    ))
+                  }
+
+                  {activeSub && (
+                    /* 內部第三層 */
+                    <div className="menu-column leaf-menu">
+                      {
+                        options
+                          .find(m => m.label === activeMain)
+                          ?.children.find(s => s.label === activeSub)
+                          ?.children.map((leaf, i) => (
+                            /* 內部第三層選項設定 */
+                            <button key={i} className='menu-btn leaf' onClick={() => handleSelect(activeMain, activeSub, leaf)}>
+                              {leaf}
+                            </button>
+                            /* 內部第三層選項設定 */
+                          ))
+                      }
+                    </div>
+                    /* 內部第三層 */
+                  )}
+                </div>
+                /* 內部第二層 */
+              )}
+            </div>
+            {/* 內部第一層 */}
+          </Dropdown.Menu>
+          {/* 元件本體 */}
+        </Dropdown>
+        {/* 元件最外層 */}
       </section>
       
 
@@ -213,4 +273,4 @@ function ReactCustomDropdown() {
   );
 }
 
-export default ReactCustomDropdown;
+export default pluralDropdown;

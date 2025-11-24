@@ -4,50 +4,7 @@
   border: 1px solid #000000;
   padding: 30px;
 
-  //自訂義input群組
-  .inputGroup {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-
-      &.custom{
-
-        //自訂義label標題
-        .customLabel {
-          font-size: 16px;
-          font-weight: 600;
-          color: #4a148c;
-        }
-        //自訂義label標題
-
-        //自訂義input
-        .customInput{
-          padding: 16px;
-          font-size: 16px;
-          border: 2px solid #ba68c8;
-          border-radius: 8px;
-          background-color: #fffafc;
-          color: #4a148c;
-          box-shadow: none;
-          outline: none;
-
-          //input的placeholder字體顏色
-          &::placeholder{
-            color: #ce93d8;
-          }
-          //input的placeholder字體顏色
-
-          //點擊input時觸發的樣式
-          &:focus{
-            border: 2px solid #7b1fa2;
-          }
-          //點擊input時觸發的樣式
-        }
-        //自訂義input
-      }
-      
-  }
-  //自訂義input群組
+  
 
   // 搜尋欄範例
   .searchBar {

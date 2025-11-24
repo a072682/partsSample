@@ -1,115 +1,68 @@
 
+// 測試用模擬最外層
+.testDropdownBox{
+  width: 600px;
+  // 元件最外層
+  .CustomDropdown{
 
-// 元件最外層
-.CustomDropdown{
-
-    /* 元件標頭 */
-    .DropdownHeader{
-      position: relative;
-      width: fit-content;
-      padding: 0.75rem 1rem;
-      border: 2px solid #90caf9;
-      background-color: #e3f2fd;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-align: center;
-      color: #0d47a1;
-    }
-    
-    /* 元件本體 */
-    .triple-dropdown-menu.dropdown-menu.test{
-      display: none;
-      width: fit-content;
-      min-width: 0px;
-      padding: 0px;
-      border: 1px solid #000000;
-      
-      &.show{
-        display: flex;
-      }
-
-      /* 內部第一層 */
-      .menu-column.main-menu{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        width: 100%;
-        border: none;
-        background-color: transparent;
-
-        /* 內部第一層選項設定 */
-        .menu-btn {
-          padding: 0.5rem 1rem;
-          text-align: left;
-          background: none;
-          border: 1px solid red;
-          background-color: red;
-          color: #ffffff;
-          border-radius: 8px;
-          cursor: pointer;
-          font-size: 14px;
-          transition: background-color 0.2s;
-
-          &:hover {
-            background-color: #f0f0f0;
-          }
+      /* 元件標頭 */
+      .DropdownHeader{
+        
+        //移除小箭頭
+        &.dropdown-toggle::after{
+          content: "";
+          display: none;
         }
+        //移除小箭頭
 
-        /* 內部第二層 */
-        .menu-column,.sub-menu{
-          position: absolute;
-          top: 0;
-          left: 100%;
+        // 要放置的元件位置
+        .key{
+          border: 2px solid #000000;
+          color: #000000;
+          background-color: #ffffff;
+          //寬度以元件最外層為準
+          width: 100%;
+          padding: 0.75rem 1rem;
+          border-radius: 8px;
+          font-size: 16px;
+          cursor: pointer;
+          text-align: center;
+        }
+        // 要放置的元件位置
+      }
+      
+      /* 下拉元件範圍 */
+      .dropdownMenuSet{
+        //寬度以元件最外層為準
+        width: 100%;
+        //position以元件最外層為準
+        padding: 0px;
+        display: none;
+        &.show{
           display: flex;
           flex-direction: column;
-          min-width: 150px;
-          background-color: aquamarine;
-
-          /* 內部第二層選項設定 */
-          .menu-btn {
-            padding: 0.5rem 1rem;
-            text-align: left;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.2s;
-
-            &:hover {
-              background-color: #f0f0f0;
-            }
-          }
-
-          /* 內部第三層 */
-          .menu-column.leaf-menu{
-            display: flex;
-            flex-direction: column;
-            min-width: 150px;
-            position: absolute;
-            top: 0;
-            left: 100%;
-            background-color: rgb(232, 255, 127);
-
-            /* 內部第三層選項設定 */
-            .menu-btn {
-              padding: 0.5rem 1rem;
-              text-align: left;
-              background: none;
-              border: none;
-              cursor: pointer;
-              font-size: 14px;
-              transition: background-color 0.2s;
-
-              &:hover {
-                background-color: #f0f0f0;
-              }
-            }
+          transform: translate(0px, 80px);
+        }
+        /* 內部選項設定 */
+        .menuItemSet {
+          width: 100%;
+          background-color: rgb(0, 0, 0);
+          color: #ffffff;
+          font-size: 16px;
+          border-radius: 8px;
+          cursor: pointer;
+          padding: 0px;
+          &:hover {
+            background-color: #f0f0f0;
+            color: #000000;
           }
         }
       }
-    }
+      /* 下拉元件範圍 */
+  }
+
 }
+
+
 
 
