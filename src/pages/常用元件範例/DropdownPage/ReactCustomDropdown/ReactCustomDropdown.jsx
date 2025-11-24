@@ -36,7 +36,6 @@ function ReactCustomDropdown() {
           {/* 元件最外層 */}
           <Dropdown className='CustomDropdown' 
                     show={show} onToggle={(isOpen) => setShow(isOpen)}
-                    data-bs-display="static"
           >
             {/* 元件標頭 */}
             <Dropdown.Toggle className='DropdownHeader' as="div" onClick={() => {setShow(!show);setActiveMain(null)}}> 
