@@ -36,6 +36,7 @@
         //寬度以元件最外層為準
         width: 100%;
         //position以元件最外層為準
+        min-width:0px;//允許空間縮小
         padding: 0px;
         display: none;
         &.show{
@@ -60,6 +61,7 @@
       }
       /* 下拉元件範圍 */
   }
+  // 元件最外層
 
 }
 
