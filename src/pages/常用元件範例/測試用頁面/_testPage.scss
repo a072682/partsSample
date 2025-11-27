@@ -1,0 +1,145 @@
+
+
+// 最外觀
+.testPage{
+    width: 100%;
+    height: 70vh;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    overflow: hidden;
+    // 目標區塊
+    .box01{
+        position: absolute;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 0;
+        left: 30%;
+        width: 50%;
+        height: auto;
+        aspect-ratio: 741 / 616;
+        border: 2px solid blue;
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // 測量寬度
+        .box02{
+            border: 1px solid rgb(124, 124, 124);
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            aspect-ratio: 741 / 616;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // 測量高度
+            .box03{
+                position: relative;
+                border: 1px solid rgb(255, 0, 0);
+                width: auto;
+                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                aspect-ratio: 741 / 616;
+
+                .imgSet{
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .imgSet02{
+                    position: absolute;
+                    z-index: 2;
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(-50%,-50%);
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+.test02{
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test03{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    .loading-wrapper {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .basic{
+            position: relative;
+            width: 50%;
+            height: auto;
+            aspect-ratio: 106 / 84;
+            background-color: rgb(104, 104, 104);
+            opacity: 1;
+            &.fade-out {
+                animation: Opacity 0.5s linear forwards;
+            }
+
+            @keyframes Opacity {
+                from {
+                    opacity: 1;
+                }
+                to {
+                    opacity: 0;
+                }
+            }
+
+            .fill {
+                position: absolute;
+                z-index: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: red;
+                &.active{
+                    animation: fillUp 0.5s linear forwards;
+                }
+
+                /* ★ height 由 0% → 100% */
+                @keyframes fillUp {
+                    from {
+                        height: 0%;
+                    }
+                    to {
+                        height: 100%;
+                    }
+                }
+            }
+
+            .img {
+                position: absolute;
+                z-index: 2;
+                background-color: transparent;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

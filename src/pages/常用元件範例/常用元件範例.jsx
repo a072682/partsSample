@@ -7,6 +7,9 @@ import ReactCustomDropdown from './DropdownPage/ReactCustomDropdown/ReactCustomD
 import ReactTab from './TabPage/ReactTab分頁元件/ReactTab';
 import UseForm from './useForm範例/UseForm範例';
 import SwiperSample from './SwiperPage/Swiper';
+import MarqueePage from './跑馬燈範例/MarqueePage';
+import TestPage from './測試用頁面/testPage';
+
 
 
 
@@ -52,6 +55,18 @@ export default function 常用元件範例() {
             title:"表格元件",
             key:"表格",
             pageData:<UseForm />,
+            disabled: false,
+        },
+        {
+            title:"走馬燈元件",
+            key:"走馬燈",
+            pageData:<MarqueePage />,
+            disabled: false,
+        },
+        {
+            title:"測試",
+            key:"測試",
+            pageData:<TestPage />,
             disabled: false,
         },
     ]
