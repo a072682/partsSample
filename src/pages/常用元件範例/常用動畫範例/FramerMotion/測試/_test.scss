@@ -1,0 +1,159 @@
+
+.testBg{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .testBg01{
+        position: absolute;
+        top: 60%;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background-color: red;
+        z-index: -1;
+    }
+
+    .testBg02{
+        position: absolute;
+        top: 70%;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background-color: rgb(0, 17, 255);
+        z-index: -2;
+    }
+
+    .contentBox{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .box01{
+            width: 100%;
+            display: flex;
+            flex: 1 1 0;
+            .box01-1{
+                width: 100%;
+                margin: 20px;
+                background-color: rgb(0, 255, 55);
+                padding: 30px;
+                .imgBox{
+                    width: 100%;
+                    height: 100%;
+                    .imgSet{
+                        max-width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .box01-2{
+                width: 100%;
+                margin: 20px;
+                background-color: rgb(255, 0, 221);
+                padding: 30px;
+                .videoBox{
+                    width: 100%;
+                    height: 100%;
+                    .bgVideo{
+                        max-width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .box02{
+            flex: 1 1 0;
+            background-color: rgb(122, 122, 122);
+        }
+    }
+}
+
+.testBg02{
+    position: relative;
+    width: 260px; height: 200px;
+    background:#083E44;
+    z-index: 0;
+    
+    .test02imgbox{
+        width: 100%;
+        height: 100%;
+        .bgVideo{
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .panel{
+        position: absolute;
+        left:100%;           /* 以容器右下角為圓心 */
+        top:100%;
+        width:200px; height:200px;
+        border-radius:50%;
+        background:#fff;
+        transform: translate(-50%,-50%); /* 圓心回推半徑 */
+        z-index: 1;          /* 白色蓋在上面 */
+    }
+    .corner{
+        position: absolute;
+        left:calc(100% - 10px);
+        top:calc(50% - 9px);
+        width:20px; height:20px;
+        background:transparent;
+        border-bottom-right-radius:50px;  /* 做出 1/4 圓角 */
+        transform: translate(-50%,-50%);/* 往左推半個寬度吃進邊緣 */
+        z-index: 1;
+        box-shadow: 6px 6px #050505;
+    }
+}
+
+
+
+.testBg04{
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    &::before{
+        content:"";
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        top:0%; 
+        left:10%;
+        background:#e61e24;
+        transform: skewX(-24deg);
+        transform-origin: left bottom;
+        z-index: -1;
+    }
+    .box01,.box02,.box03{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 48px;
+        .imgBox{
+            width: 100%;
+            height: auto;
+            .imgSet{
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+    .box02{
+        margin-top: 50px;
+    }
+}
+
+

@@ -1,0 +1,90 @@
+
+.圓角按鈕範例{
+    //元件最外圍
+    .btnBox{
+        position: relative;
+        width: 260px; height: 200px;
+        background:#083E44;
+        z-index: 0;
+        //元件背景
+        .bgImgbox{
+            width: 100%;
+            height: 100%;
+            // 背景設定
+            .bgVideo{
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            // 背景設定
+        }
+        //元件背景
+
+        //按鈕區塊設定
+        .boxShape{
+            position: absolute;
+            left:auto;
+            right: 0%;           /* 以容器右下角為圓心 */
+            top:auto;
+            bottom: 0%;
+            width:50px; height:40px;
+            border-radius:10px 0px 0px 0px;
+            background:#fff;
+            z-index: 1;  
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            transition:1s;
+            &:hover{
+                width:200px;
+                .corner02{
+                    transition:1s;
+                    left:calc(100% - 210px);
+                }
+            }
+
+            // 按鈕本體設定
+            .boxBtn{
+                width: 100%;
+                height: calc(100% - 10px);
+                border: none;
+                border-radius: 12px;
+                margin: 5px;
+                padding: 0px;
+                background-color: #27f5b0;
+            }
+            // 按鈕本體設定
+
+            //邊緣圓角遮罩
+            .corner02{
+                position: absolute;
+                left:calc(100% - 60px);
+                top:calc(100% - 10px);
+                width:20px; height:20px;
+                background:transparent;
+                border-bottom-right-radius:50px;  /* 做出 1/4 圓角 */
+                transform: translate(-50%,-50%);/* 往左推半個寬度吃進邊緣 */
+                z-index: 1;
+                box-shadow: 3px 6px #ffffff;
+                transition:1s;
+            }
+            //邊緣圓角遮罩
+        }
+        //按鈕區塊設定
+
+        //邊緣圓角遮罩
+        .corner01{
+            position: absolute;
+            left:calc(100% - 10px);
+            top:calc(100% - 50px);
+            width:20px; height:20px;
+            background:transparent;
+            border-bottom-right-radius:50px;  /* 做出 1/4 圓角 */
+            transform: translate(-50%,-50%);/* 往左推半個寬度吃進邊緣 */
+            z-index: 1;
+            box-shadow: 6px 6px #ffffff;
+        }
+        //邊緣圓角遮罩
+    }
+    //元件最外圍
+}

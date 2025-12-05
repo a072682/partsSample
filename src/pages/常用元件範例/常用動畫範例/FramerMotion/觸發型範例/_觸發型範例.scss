@@ -1,0 +1,100 @@
+
+.觸發型範例{
+
+    // 元件外圍(充當觸發器)
+    .outBox{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        z-index: 0;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // 背景box(紅)
+        .boxSet01{
+            position: absolute;
+            top: 60%;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background-color: red;
+            z-index: -1;
+        }
+        // 背景box(紅)
+
+        // 背景box(藍)
+        .boxSet02{
+            position: absolute;
+            top: 70%;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background-color: rgb(0, 17, 255);
+            z-index: -2;
+        }
+        // 背景box(藍)
+
+        // 內容區塊
+        .contentBox{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            // 上半部區塊
+            .topBox{
+                width: 100%;
+                display: flex;
+                flex: 1 1 0;
+                //左邊區塊
+                .leftBoxSet{
+                    width: 100%;
+                    margin: 20px;
+                    background-color: rgb(0, 255, 55);
+                    padding: 30px;
+                    .imgBox{
+                        width: 100%;
+                        height: 100%;
+                        .imgSet{
+                            max-width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                //左邊區塊
+
+                //右邊區塊
+                .rightBoxSet{
+                    width: 100%;
+                    margin: 20px;
+                    background-color: rgb(255, 0, 221);
+                    padding: 30px;
+                    .videoBox{
+                        width: 100%;
+                        height: 100%;
+                        .bgVideo{
+                            max-width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                //右邊區塊
+            }
+            // 上半部區塊
+
+            // 下半部區塊
+            .buttomBox{
+                flex: 1 1 0;
+                background-color: rgb(122, 122, 122);
+            }
+            // 下半部區塊
+        }
+        // 內容區塊
+    }
+    // 元件外圍(充當觸發器)
+}
+

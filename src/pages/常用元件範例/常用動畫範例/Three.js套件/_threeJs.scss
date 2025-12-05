@@ -1,0 +1,28 @@
+
+
+.ThreeJs套件範例{
+
+    //元件最外圍
+    .ThreeJsBox{
+        width: auto;
+        height: auto;
+        border: 1px solid red;
+        border-radius: 12px;
+        padding: 10px;
+        
+        //顯示模型本體
+        .ThreeJs{
+            background-color: rgb(71, 71, 71);
+            width: 500px;
+            height: 500px;
+            // background-color: transparent;
+            // background-image: url('/images/動畫/ThreeJs/bg.jpg');
+            // background-position-y: 0%;
+            // background-position-x: 0%;      /* 左上角 */
+            // background-size: 100% 100%;    /* 寬度填滿，高度等比 */
+            // background-repeat: no-repeat;
+        }
+        //顯示模型本體
+    }
+    //元件最外圍
+}

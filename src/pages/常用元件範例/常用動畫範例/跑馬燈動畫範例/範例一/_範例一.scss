@@ -1,0 +1,53 @@
+//動畫設定
+@keyframes marqueeImgX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeImgY {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+//動畫設定
+
+// 範例一
+.範例一{
+    // 跑馬燈外框
+    .MarqueePage {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid red;
+
+        // 跑馬燈內容
+        .track {
+            width: 200%;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            animation: marqueeImgX 2s linear infinite;
+            
+            //內容外框
+            .box{
+                border: 1px solid blue;
+                width: 100%;
+                height: auto;
+                //內容本體
+                .imgSet {
+                    width: 100%;
+                    height: auto;
+                }
+                //內容本體
+            }
+            //內容外框
+        }
+        // 跑馬燈內容
+    }
+    // 跑馬燈外框
+}
+// 範例一
+
+
+
+

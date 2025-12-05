@@ -1,0 +1,18 @@
+
+.貼圖按鈕範例{
+    .btnSet{
+        border: none;
+        padding: 0px;
+        width: 54px;
+        height: auto;
+        aspect-ratio: 54 / 52;
+        background-color: transparent;
+        background-image: url('/images/貼圖按鈕/factionsPrev.png');
+        background-position: center 0;      /* 左上角 */
+        background-size: 100% 200%;    /* 寬度填滿，高度等比 */
+        background-repeat: no-repeat;
+        &:hover {
+            background-position-y: 100%;
+        }
+    }
+}
