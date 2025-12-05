@@ -8,7 +8,7 @@ import EffectFadeSwiper from './淡入淡出版本/EffectFadeSwiper';
 import SwiperWithTab from './搭配tab元件swiper範例/SwiperWithTab';
 import SwiperDoubleSample from './大圖連結縮圖版本/SwiperDoubleSample';
 import NoAnimationVer from './無動畫版本/NoAnimationVer';
-import VerticalSwiper from './垂直輪播範例/verticalSwiper';
+import VerticalSwiper from './垂直輪播範例/VerticalSwiper';
 import { useState } from 'react';
 
 
