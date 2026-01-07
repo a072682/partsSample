@@ -16,6 +16,8 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";//Google reC
 
 import "chart.js/auto";//chart.js圖表套件
 
+import "./pages/常用系統/會員系統/前端/API/API.js"//api攔截器
+
 import './assets/styles/all.scss'
 
 

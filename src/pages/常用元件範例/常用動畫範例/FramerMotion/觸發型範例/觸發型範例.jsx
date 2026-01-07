@@ -12,9 +12,9 @@ export default function 觸發型範例() {
         show: {
             opacity: 1,
             transition: {
-            duration: 0,                        // 0：不要讓父層自己動畫造成等待
-            delayChildren: 0.08,
-            staggerChildren: 0.06,
+                duration: 0,                        // 0：不要讓父層自己動畫造成等待
+                delayChildren: 0.08,
+                staggerChildren: 0.06,
             // 想骨牌再開：delayChildren: 0.08, staggerChildren: 0.06,
             },
         },

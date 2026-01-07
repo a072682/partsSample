@@ -16,6 +16,7 @@ import 常用動畫元件範例 from './常用動畫範例/常用動畫元件範
 
 
 
+
 export default function 常用元件範例() {
 
     //讀取路徑
@@ -146,7 +147,7 @@ export default function 常用元件範例() {
                                     >
                                         {
                                             item.key === "輪播片"? 
-                                            (activeTab === "輪播片" && <SwiperSample />)
+                                            (activeTab === "輪播片" && <輪播片元件 />)
                                             : item.pageData
                                         }
                                     </Tab.Pane>

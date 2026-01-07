@@ -1,0 +1,54 @@
+
+
+.編輯器套件{
+
+    .boxSet{
+        //套件最外圍
+        .tox{
+
+            &.tox-tinymce{
+                //套件內容區
+                .tox-editor-container {
+
+                    //套件工具列外圍
+                    .tox-editor-header{
+                        //background-color: aqua;//工具列底色設定
+                        //工作列群組顯示區塊
+                        .tox-toolbar-overlord{
+                            background-color: transparent;
+
+                            .tox-toolbar__primary{
+                                background-color: transparent;
+
+                                .tox-toolbar__group{
+                                    
+                                    .tox-tbtn{
+                                        //icon背景底色設定
+                                        //background-color: rgb(0, 0, 0);
+                                        .tox-icon{
+                                            
+                                            svg{
+                                                //icon顏色設定
+                                                //fill: aqua;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        /* 工具列背景 */
+                    }
+                    //套件工具列外圍
+                }
+                //套件內容區
+            }
+        }
+        //套件最外圍
+
+        // 打字區塊
+        .tinymceSet{
+            
+        }
+        // 打字區塊
+    }
+}

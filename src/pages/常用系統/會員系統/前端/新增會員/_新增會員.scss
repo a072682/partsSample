@@ -1,0 +1,23 @@
+
+
+.新增會員{
+
+    // 表單最外圍
+    .formSet{
+        border: 1px solid #000000;
+        border-radius: 12px;
+        background-color: #474747;
+        width: fit-content;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 24px;
+
+        .labelSet{
+            color: #ffffff;
+        }
+    }
+}

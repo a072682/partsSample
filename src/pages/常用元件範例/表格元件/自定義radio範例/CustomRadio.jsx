@@ -15,13 +15,24 @@ export default function CustomRadio() {
     //#endregion
 
 
-    //#region 付款方式狀態
-    const [selectedPayment, setSelectedPayment] = useState("");
+    //#region 狀態宣告
+    const [data, setData] = useState({
+        item: "",
+    });
+
+    useEffect(() => {
+        console.log("自定義radio內容:", data);
+    }, [data]);
     //#endregion
 
-    //#region 處理選擇付款方式的變化
-    const handlePaymentChange = (event) => {
-        setSelectedPayment(event.target.value);
+    //#region 資料輸入函式
+    const handleDataIn = (event) => {
+        const { name, value } = event.target;
+
+        setData(prev => ({
+            ...prev,
+            [name]: value,
+        }));
     };
     //#endregion
 
@@ -34,16 +45,16 @@ export default function CustomRadio() {
                     {/* radio群組設定(item01) */}
                     <div className="radioBox item01">
                         {/* input本體 */}
-                        <input  id="item01" 
+                        <input  id="CustomRadioItem01" 
                                 type="radio" 
-                                name="item01" 
+                                name="item" 
                                 value="item01" 
-                                checked={selectedPayment === "item01"} 
-                                onChange={handlePaymentChange}
+                                checked={data.item === "item01"} 
+                                onChange={handleDataIn}
                         />
                         {/* input本體 */}
                         {/* 標題設定 */}
-                        <label htmlFor="item01" className="customCheckoutLabel">
+                        <label htmlFor="CustomRadioItem01" className="customCheckoutLabel">
                             選項1
                         </label>
                         {/* 標題設定 */}
@@ -53,16 +64,16 @@ export default function CustomRadio() {
                     {/* radio群組設定(item02) */}
                     <div className="radioBox item02">
                         {/* input本體 */}
-                        <input  id="item02" 
+                        <input  id="CustomRadioItem02" 
                                 type="radio" 
-                                name="item02" 
+                                name="item" 
                                 value="item02" 
-                                checked={selectedPayment === "item02"} 
-                                onChange={handlePaymentChange}
+                                checked={data.item === "item02"} 
+                                onChange={handleDataIn}
                         />
                         {/* input本體 */}
                         {/* 標題設定 */}
-                        <label htmlFor="item02" className="customCheckoutLabel">
+                        <label htmlFor="CustomRadioItem02" className="customCheckoutLabel">
                             選項2
                         </label>
                         {/* 標題設定 */}
@@ -72,36 +83,38 @@ export default function CustomRadio() {
                     {/* radio群組設定(item03) */}
                     <div className="radioBox item03">
                         <input
-                            id="item03"
+                            id="CustomRadioItem03"
                             type="radio"
-                            name="item03"
+                            name="item"
                             value="item03"
-                            checked={selectedPayment === "item03"}
-                            onChange={handlePaymentChange}
+                            checked={data.item === "item03"}
+                            onChange={handleDataIn}
                             data-bs-toggle="collapse"
                             data-bs-target="#creditCardInputTest"
-                            aria-expanded={selectedPayment === "item03"}
+                            aria-expanded={data.item === "item03"}
                             aria-controls="creditCardInputTest"
                         />
-                        <label htmlFor="item03" className="customCheckoutLabel">
-                            Apple Pay
+                        <label htmlFor="CustomRadioItem03" className="customCheckoutLabel">
+                            選項3
                         </label>
                     </div>
-                    <Collapse in={selectedPayment === "item03"}>
+                    <Collapse in={data.item === "item03"}>
                         <div id="creditCardInputTest" className="card card-body mt-2 custom-collapse">
-                            <label htmlFor="creditCardNumber" className="form-label">
-                                信用卡號碼
+                            <label htmlFor="Number" className="form-label">
+                                輸入資料
                             </label>
                             <input
-                                type="text"
-                                id="creditCardNumber"
-                                name="creditCardNumber"
+                                type="number"
+                                id="Number"
+                                name="Number"
                                 className="form-control"
-                                placeholder="請輸入信用卡號"
+                                placeholder="請輸入資料"
                             />
                         </div>
                     </Collapse> 
                     {/* radio群組設定(item03) */}
+                    <h3>資料內容:</h3>
+                    <div>{JSON.stringify(data)}</div>
                 </div>
                 {/* 元件最外圍 */}
 

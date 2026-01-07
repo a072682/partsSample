@@ -8,6 +8,7 @@
         .tabItem {
             
             display: flex;
+            flex-wrap: wrap;
             /* 選項按鈕本體 */
             .tabLink {
                 color: #000000;

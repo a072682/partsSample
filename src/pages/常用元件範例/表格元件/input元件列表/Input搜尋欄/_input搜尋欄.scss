@@ -1,0 +1,46 @@
+
+.input搜尋欄 {
+    width: 100%;
+    max-width: 360px;
+
+    // 元件本體
+    .searchBox {
+        position: relative;
+        width: 100%;
+
+        //搜尋icon
+        .searchIcon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #666;
+            pointer-events: none; // icon 不阻擋輸入
+        }
+        //搜尋icon
+
+         //input本體設定
+        .searchInputSet {
+            width: 100%;
+            padding: 8px 12px 8px 36px; // 左側 icon 位置
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.2s;
+
+            //點選時的狀態
+            &:focus {
+                border-color: #1976d2;
+                box-shadow: 0 0 3px rgba(25, 118, 210, 0.4);
+                outline: none;
+            }
+            //點選時的狀態
+        }
+        //input本體設定
+    }
+    // 元件本體
+
+    
+   
+}

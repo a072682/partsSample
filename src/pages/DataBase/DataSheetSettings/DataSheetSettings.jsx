@@ -74,11 +74,11 @@ export default function DataSheetSettings() {
                     {
                         DataSheetData?.map((item)=>{
                             return(
-                                <>
-                                    <Nav.Item key={item.key} className='tab-item'>
-                                        <Nav.Link className="tab-link" eventKey={item.key}>{item.title}</Nav.Link>
-                                    </Nav.Item>
-                                </>
+                                
+                                <Nav.Item key={item.key} className='tab-item'>
+                                    <Nav.Link className="tab-link" eventKey={item.key}>{item.title}</Nav.Link>
+                                </Nav.Item>
+                                
                             )
                         })
                     }
@@ -88,11 +88,11 @@ export default function DataSheetSettings() {
                     {
                         DataSheetData?.map((item)=>{
                             return(
-                                <>
-                                    <Tab.Pane key={item.key} eventKey={item.key}>
-                                        {item.pageData}
-                                    </Tab.Pane>
-                                </>
+                                
+                                <Tab.Pane key={item.key} eventKey={item.key}>
+                                    {item.pageData}
+                                </Tab.Pane>
+                                
                             )
                         })
                     }

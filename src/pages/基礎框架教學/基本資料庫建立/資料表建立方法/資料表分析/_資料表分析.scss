@@ -1,0 +1,85 @@
+
+
+.資料表分析{
+
+    .imgBox{
+        width: 100%;
+        height: auto;
+        .imgSet{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .tableBox{
+        overflow: hidden;
+        overflow-x: auto;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 8px;
+        .spec{
+            
+            flex-shrink: 0;
+            thead{
+                tr{
+                    th{
+                        text-align: center;
+                        white-space: nowrap;//取消文字自動換行
+                    }
+                }
+            }
+
+            tbody{
+                tr{
+                    td{
+                        text-align: center;
+                        white-space: nowrap;//取消文字自動換行
+                        .groupBox{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: start;
+                            .checkBoxGroup{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                label{
+                                    white-space: nowrap;//取消文字自動換行
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .addItemBox{
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        .inputGroup{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .radioGroupBox{
+            display: flex;
+            flex-direction: column;
+            .radioGroup{
+                display: flex;
+            }
+        }
+        
+    }
+    
+}

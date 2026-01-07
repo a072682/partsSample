@@ -1,0 +1,59 @@
+
+
+.資料庫建立{
+    width: 100%;
+    min-height:100vh;
+    background-color: antiquewhite;
+    //最外框
+    .appTabs {
+    
+
+        /* Tab 選單區 */
+        .tabBox {
+            /* 選項按鈕外層 */
+            .tabItem {
+
+                /* 選項按鈕本體 */
+                .tabLink {
+                    color: #000000;
+                    /* hover 狀態*/
+                    &:hover {
+                        color: #ffffff;
+                        background: #0d6efd;
+                    }
+
+                    /* active 狀態 */
+                    &.active {
+                        color: #fff;
+                        background: #0d6efd;
+                    }
+
+                    /* disabled 狀態 */
+                    &.disabled {
+                        opacity: 0.5;
+                        cursor: not-allowed;
+                        pointer-events: none;
+                    }
+                }
+                /* 選項按鈕本體 */
+            }
+            /* 選項按鈕外層 */
+        }
+         /* Tab 選單區 */
+
+        /* Tab 內容區 */
+        .tabContent {
+            background: #fff;            /* 內容底色 */
+            border: 1px solid #e5e9ef;   /* 細邊框 */
+            border-top: 0;               /* 與選單列貼齊，去掉上邊 */
+            border-radius: 0 0 10px 10px;/* 下方圓角 */
+            padding: 16px;               /* 內容內距 */
+
+            /* 內容外層（.tab-pane） */
+            .tabPane {
+
+            }
+        }
+    }
+    //最外框
+}

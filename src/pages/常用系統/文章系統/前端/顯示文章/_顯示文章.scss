@@ -1,0 +1,58 @@
+
+
+.顯示文章{
+
+    // 文章列表
+    .articleListBox{
+        width: 100%;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        padding: 12px;
+        .titleBox{
+            display: flex;
+            gap: 24px;
+            .titleSet{
+                
+            }
+        }
+
+        .contentBox{
+
+            .itemSet{
+                display: flex;
+                gap: 24px;
+            }
+        }
+    }
+    // 文章列表
+
+    // 文章區塊
+    .articleContent{
+        width: 100%;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        padding: 12px;
+
+        .articleBox{
+            p{
+                
+            }
+
+            img{
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+    // 文章區塊
+
+    //修改文章區塊
+    .editArticleBox{
+        width: 100%;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        padding: 12px;
+    }
+    //修改文章區塊
+}

@@ -1,0 +1,17 @@
+ 
+.圖片上傳{
+
+    .圖片上傳box{
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 8px;
+
+        .imgSet{
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+} 

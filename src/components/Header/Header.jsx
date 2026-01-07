@@ -56,8 +56,8 @@ function Header(){
                     </motion.div>
 
                     <motion.div variants={itemV}>
-                        <Link to="/WebInfrastructure" className='item'>
-                        <p className='text'>網站基礎架構說明</p>
+                        <Link to="/基礎框架教學" className='item'>
+                            <p className='text'>網站基礎框架教學</p>
                         </Link>
                     </motion.div>
 
@@ -68,83 +68,42 @@ function Header(){
                     </motion.div>
 
                     <motion.div variants={itemV}>
-                        <Link to="/animationCss" className='item'>
-                        <p className='text'>CSS動畫說明</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/FramerMotion" className='item'>
-                        <p className='text'>FramerMotion說明</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/ChartTest" className='item'>
-                        <p className='text'>Chart套件</p>
-                        <p className='text'>圖表套件測試</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/D3" className='item'>
-                        <p className='text'>D3套件</p>
-                        <p className='text'>圖表套件測試</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/CommentSystem" className='item'>
-                        <p className='text'>CommentSystem</p>
-                        <p className='text'>留言室組件</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/ShoppingCart" className='item'>
-                        <p className='text'>ShoppingCart</p>
-                        <p className='text'>購物車組件</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/PreCodePage" className='item'>
-                        <p className='text'>Pre/Code</p>
-                        <p className='text'>樣式 & 設定</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/DataBase" className='item'>
-                        <p className='text'>資料庫和伺服器端基礎架構</p>
-                        <p className='text'>創建 & 設定</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/ApiPage" className='item'>
-                        <p className='text'>API</p>
-                        <p className='text'>創建 & 設定</p>
-                        </Link>
-                    </motion.div>
-
-                    <motion.div variants={itemV}>
-                        <Link to="/PostmanTest" className='item'>
-                        <p className='text'>Postman測試</p>
+                        <Link to="/常用系統範例" className='item'>
+                        <p className='text'>常用系統範例</p>
                         </Link>
                     </motion.div>
 
                     <motion.div variants={itemV}>
                         <Link to="/RenderServerUpLoad" className='item'>
-                        <p className='text'>Render伺服器</p>
+                        <p className='text'>常用JS函式</p>
+                        </Link>
+                    </motion.div>
+
+                    <motion.div variants={itemV}>
+                        <Link to="/伺服器雲端上傳" className='item'>
+                        <p className='text'>伺服器</p>
+                        <p className='text'>上傳 & 設定</p>
+                        </Link>
+                    </motion.div>
+
+                    <motion.div variants={itemV}>
+                        <Link to="/資料庫雲端上傳" className='item'>
+                        <p className='text'>資料庫</p>
                         <p className='text'>上傳 & 設定</p>
                         </Link>
                     </motion.div>
 
                     <motion.div variants={itemV}>
                         <Link to="/RenderDataBaseUpLoad" className='item'>
-                        <p className='text'>Render資料庫</p>
-                        <p className='text'>上傳 & 設定</p>
+                        <p className='text'>其他套件</p>
+                        <p className='text'>教學 & 設定</p>
+                        </Link>
+                    </motion.div>
+
+                    <motion.div variants={itemV}>
+                        <Link to="/RenderDataBaseUpLoad" className='item'>
+                        <p className='text'>其他工具</p>
+                        <p className='text'>教學 & 設定</p>
                         </Link>
                     </motion.div>
                 </motion.div>

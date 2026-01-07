@@ -22,17 +22,13 @@
             .accordion-button {
                 /*未展開時元件標頭設定*/
                 background-color: burlywood; //按鈕背景顏色
-                box-shadow: none;
                 color: #424242; //按鈕字體顏色
                 box-shadow: none; // ✅ 移除點擊時的藍色外框陰影
                 outline: none;     // ✅ 移除可能的 outline
-                box-shadow: none;  // 本底底部白色邊緣
                 font-size: 1.5rem; //文字設定
                 font-weight: bold; //文字設定
                 padding: 1rem; 
-                box-shadow: none; // ✅ 移除點擊時的藍色外框陰影
-                outline: none;     // ✅ 移除可能的 outline
-                box-shadow: none;  // 本底底部白色邊緣
+                
 
                 &:not(.collapsed) {
                     /*展開時元件標頭設定*/

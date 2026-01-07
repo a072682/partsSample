@@ -34,8 +34,6 @@ export default function 跑馬燈動畫範例() {
 
     return (
         <>
-            
-
             <article className='跑馬燈動畫範例'>
                 <h3>跑馬燈動畫範例</h3>
                 {/* 控制層 顯示元素不存在 */}

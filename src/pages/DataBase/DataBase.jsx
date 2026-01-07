@@ -1,15 +1,7 @@
 
-import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
-import Prism from 'prismjs';                // 核心功能
-import 'prismjs/components/prism-jsx';      // JSX 支援
-import 'prismjs/components/prism-markup';   // HTML 支援
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import dedent from 'dedent';//去除多餘空白保持縮排格式
-import BasicSettings from './BasicSettings/BasicSettings';
-import DataSheetSettings from './DataSheetSettings/DataSheetSettings';
-import DBeaverSettings from './DBeaverSettings/DBeaverSettings';
-import DataSheetChart from './DataSheetChart/DataSheetChart';
+
 
 
 export default function DataBase() {
@@ -21,22 +13,22 @@ export default function DataBase() {
           {
               title:"資料庫端最基礎架構設定",
               key:"BasicSettings",
-              pageData:<BasicSettings />
+              pageData:"",
           },
           {
               title:"資料表結構圖表",
               key:"DataSheetChart",
-              pageData:<DataSheetChart />
+              pageData:"",
           },
           {
               title:"資料表建立設定",
               key:"DataSheetSettings",
-              pageData:<DataSheetSettings />
+              pageData:"",
           },
           {
               title:"DBeaver資料表建立教學",
               key:"DBeaverSettings",
-              pageData:<DBeaverSettings />
+              pageData:"",
           },
       ]
 
@@ -48,11 +40,11 @@ export default function DataBase() {
             {
                 ApiData?.map((item)=>{
                     return(
-                        <>
+                        
                             <Nav.Item key={item.key} className='tab-item'>
                                 <Nav.Link className="tab-link" eventKey={item.key}>{item.title}</Nav.Link>
                             </Nav.Item>
-                        </>
+                        
                     )
                 })
             }
@@ -62,11 +54,11 @@ export default function DataBase() {
             {
                 ApiData?.map((item)=>{
                     return(
-                        <>
+                        
                             <Tab.Pane key={item.key} eventKey={item.key}>
                                 {item.pageData}
                             </Tab.Pane>
-                        </>
+                        
                     )
                 })
             }

@@ -6,6 +6,9 @@ import CustomRadio from "./自定義radio範例/CustomRadio";
 import NumberInputGroup from "./自訂義input群組(帶按鈕)/NumberInputGroup";
 import ReactPagination from "./頁碼元件範例/使用層/ReactPagination";
 import MessageItem from "./訊息列表範例/訊息列表";
+import DefaultForm from "./簡單表格範例/DefaultForm";
+import Input元件列表 from "./input元件列表/input元件列表";
+import 編輯器套件 from "./編輯器套件/編輯器套件";
 
 
 export default function 表格元件() {
@@ -19,51 +22,69 @@ export default function 表格元件() {
   //#endregion
 
   //#region tab控制
-  const [formTabActiveTab, setFormTabActiveTab] = useState('UseForm範例');
+  const [formTabActiveTab, setFormTabActiveTab] = useState('簡單表格');
   //#endregion
 
   //#region tab顯示設定
   const formTabdata = [
-      {
-          title:"UseForm範例",
-          key:"UseForm",
-          pageData:<UseForm />,
-          disabled: false,
-      },
-      {
-          title:"自定義radio範例",
-          key:"自定義radio",
-          pageData:<CustomRadio />,
-          disabled: false,
-      },
-      {
-          title:"自訂義input群組(帶按鈕)",
-          key:"自訂義inputWithBtn",
-          pageData:(
-            <NumberInputGroup 
-              id="keyId" //定義的id
-              title="自定義"  //label的內容
-              value={numData} //初始數值
-              unit="mm" //顯示的單位
-              dataOutput={(num) => setNumData(num)} //內部的數值有更新會寫入numData狀態中
-              min = {0} //最低數值
-              max = {50} //最高數值
-            />
-          ),
-          disabled: false,
-      },
-      {
-          title:"頁碼元件範例",
-          key:"頁碼元件",
-          pageData:<ReactPagination />,
-          disabled: false,
-      },
-      {
-          title:"訊息列表範例",
-          key:"訊息列表",
-          pageData:<MessageItem />,
-          disabled: false,
-      },
+    {
+        title:"簡單表格範例",
+        key:"簡單表格",
+        pageData:<DefaultForm />,
+        disabled: false,
+    },
+    {
+        title:"Input元件列表",
+        key:"Input元件",
+        pageData:<Input元件列表 />,
+        disabled: false,
+    },
+    {
+        title:"UseForm範例",
+        key:"UseForm",
+        pageData:<UseForm />,
+        disabled: false,
+    },
+    {
+        title:"自定義radio範例",
+        key:"自定義radio",
+        pageData:<CustomRadio />,
+        disabled: false,
+    },
+    {
+        title:"自訂義input群組(帶按鈕)",
+        key:"自訂義inputWithBtn",
+        pageData:(
+        <NumberInputGroup 
+            id="keyId" //定義的id
+            title="自定義"  //label的內容
+            value={numData} //初始數值
+            unit="mm" //顯示的單位
+            dataOutput={(num) => setNumData(num)} //內部的數值有更新會寫入numData狀態中
+            min = {0} //最低數值
+            max = {50} //最高數值
+        />
+        ),
+        disabled: false,
+    },
+    {
+        title:"頁碼元件範例",
+        key:"頁碼元件",
+        pageData:<ReactPagination />,
+        disabled: false,
+    },
+    {
+        title:"訊息列表範例",
+        key:"訊息列表",
+        pageData:<MessageItem />,
+        disabled: false,
+    },
+    {
+        title:"編輯器套件",
+        key:"編輯器套件",
+        pageData:<編輯器套件 />,
+        disabled: false,
+    },
   ]
   //#endregion
 
