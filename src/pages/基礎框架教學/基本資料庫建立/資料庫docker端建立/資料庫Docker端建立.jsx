@@ -64,12 +64,12 @@ export default function 資料庫Docker端建立() {
             <p>由於官方指定映像檔名稱為postgres</p>
             <p>所以可以看到postgres名稱的印象檔</p>
             <img    className='mb-12' 
-                    style={{width:"100%",aspectRatio:"700 / 650",objectFit:"cover",borderRadius:"4px",}} 
-                    src="/images/基礎框架教學/基本資料庫建立/資料庫docker端建立/dockerServer01.png" alt="" />
+                    style={{width:"100%",objectFit:"cover",borderRadius:"4px",}} 
+                    src="/images/基礎框架教學/基本資料庫建立/資料庫Docker端建立/dockerServer01.png" alt="" />
             <p>從Containers中可以確認容器的名稱</p>
             <img    className='mb-12' 
-                    style={{width:"100%",aspectRatio:"700 / 650",objectFit:"cover",borderRadius:"4px",}} 
-                    src="/images/基礎框架教學/基本資料庫建立/資料庫docker端建立/dockerServer02.png" alt="" />
+                    style={{width:"100%",objectFit:"cover",borderRadius:"4px",}} 
+                    src="/images/基礎框架教學/基本資料庫建立/資料庫Docker端建立/dockerServer02.png" alt="" />
         </div>
     </div>
   );
