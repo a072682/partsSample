@@ -1,6 +1,5 @@
 
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
-import Prism from 'prismjs';                // 核心功能
 import dedent from 'dedent';//去除多餘空白保持縮排格式
 import './_Docker端資料庫建立.scss';//引入指定樣式
 

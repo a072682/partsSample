@@ -7,8 +7,6 @@ import './_本地端資料庫建立.scss';//引入指定樣式
 
 export default function 本地端資料庫建立() {
 
-    
-
   return (
     <div className="container">
         <div className="本地端資料庫建立">
