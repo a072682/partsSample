@@ -12,7 +12,7 @@ import Input搜尋欄 from './Input搜尋欄/Input搜尋欄';
 import Input電話 from './Input電話/Input電話';
 import Input數字 from './Input數字/Input數字';
 import Input檔案 from './Input檔案/Input檔案';
-import Textarea元件 from './textarea元件/textarea元件';
+import Textarea元件 from './Textarea元件/Textarea元件';
 
 
 
