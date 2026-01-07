@@ -4,7 +4,7 @@ import { Tab, Nav } from 'react-bootstrap';//宣告元件
 import './_雲端圖片前端頁面.scss';//引入指定樣式
 import 圖片上傳 from './圖片上傳/圖片上傳';
 import 取得圖片 from './取得圖片/取得圖片';
-import 圖片覆蓋 from './圖片覆蓋/圖片覆蓋.JSX';
+import 圖片覆蓋 from './圖片覆蓋/圖片覆蓋';
 import 圖片刪除 from './刪除圖片/刪除圖片';
 
 
