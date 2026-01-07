@@ -4,7 +4,7 @@ import { useState } from 'react';
 import './_textarea元件.scss';
 
 
-export default function Textarea元件 () {
+export default function textarea元件 () {
 
     //#region
     //#endregion
