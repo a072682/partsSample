@@ -7,7 +7,7 @@ import NumberInputGroup from "./自訂義input群組(帶按鈕)/NumberInputGroup
 import ReactPagination from "./頁碼元件範例/使用層/ReactPagination";
 import MessageItem from "./訊息列表範例/訊息列表";
 import DefaultForm from "./簡單表格範例/DefaultForm";
-import Input元件列表 from "./input元件列表/input元件列表";
+import Input元件列表 from "./input元件列表/Input元件列表.jsx";
 import 編輯器套件 from "./編輯器套件/編輯器套件";
 
 
