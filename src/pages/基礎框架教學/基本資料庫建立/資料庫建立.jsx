@@ -1,17 +1,10 @@
 import { Tab, Nav } from 'react-bootstrap';//宣告元件
-import { useEffect, useState } from 'react';//宣告狀態
+import { useState } from 'react';//宣告狀態
 import './_資料庫建立.scss';//引入指定樣式
 
 import 本地端資料庫建立 from './資料庫本地端建立/本地端資料庫建立';
-import Docker端資料庫建立 from './資料庫Docker端建立/Docker端資料庫建立';
 import 資料表建立 from './資料表建立方法/資料表建立';
-
-
-
-
-
-
-
+import 資料庫Docker端建立 from './資料庫Docker端建立/資料庫Docker端建立';
 
 
 export default function 資料庫建立() {
@@ -29,7 +22,7 @@ export default function 資料庫建立() {
         {
             title:"資料庫建立(docker)",
             key:"資料庫docker端",
-            pageData:<Docker端資料庫建立 />,
+            pageData:<資料庫Docker端建立 />,
             disabled: false,
         },
         {
