@@ -1,7 +1,7 @@
 import { Tab, Nav } from 'react-bootstrap';//宣告元件
 import { useEffect, useState } from 'react';//宣告狀態
 import './_常用標籤.scss';//引入指定樣式
-import SVG貼圖範例 from './svg貼圖範例/svg貼圖範例';
+import SVG貼圖範例 from './SVG貼圖範例/SVG貼圖範例';
 
 
 
