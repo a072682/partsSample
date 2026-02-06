@@ -1,0 +1,224 @@
+
+
+.客製過場動畫化輪播片帶濾鏡範例{
+    width: 100%;
+    height: calc(100dvh - 70px);
+    background-color: rgb(228, 199, 162);
+    position: relative;
+    
+    // 元件外圍
+    .stage {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        overflow: hidden;
+        background: black;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        //黑色轉場片&黃色轉場片
+        .panel-group {
+            position: absolute;
+            top: 0;
+            width: 200%; // 關鍵：兩張 panel
+            height: 100%;
+            display: flex;
+            z-index: 3;
+
+            &.next{
+                left: 100%;
+                flex-direction: row;
+                //動畫時間0.8秒
+                animation: groupSlideLeft 1s ease-out forwards;
+
+                @keyframes groupSlideLeft {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    50% {
+                        transform: translateX(-100%);
+                    }
+                    100% {
+                        transform: translateX(-200%);
+                    }
+                }
+            }
+
+            &.prev{
+                left: -200%;
+                flex-direction: row-reverse;
+                //動畫時間0.8秒
+                animation: groupSlideRight 1s ease-out forwards;
+
+                @keyframes groupSlideRight {
+                    0% {
+                        transform: translateX(0%);
+                    }
+                    50% {
+                        transform: translateX(100%);
+                    }
+                    100% {
+                        transform: translateX(200%);
+                    }
+                }
+            }
+
+            //黑色轉場片
+            .black-panel {
+                width: 100%;
+                height: 100%;
+                background: black;
+            }
+            //黑色轉場片
+
+            //黃色轉場片
+            .yellow-panel {
+                width: 100%;
+                height: 100%;
+                background: rgb(255, 251, 1);
+            }
+            //黃色轉場片
+        }
+        //黑色轉場片&黃色轉場片   
+        
+        .filter-panel{
+            //Curtain / Wipe / Roll-up Effect（窗簾式、捲軸式轉場）
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //background: rgba(0, 238, 255, 0.3);
+            z-index: 2;
+            object-fit: cover;
+            filter: 
+            //黑白化
+            grayscale(1) 
+            //壓暗整體亮度(1：原本亮度 / < 1：變暗 / > 1：變亮)
+            brightness(.76) 
+            //拉開明暗差距(對比500%)
+            contrast(500%)
+            //
+            url(#white-to-yellow);
+
+            &.next{
+        
+                //動畫時間1秒
+                animation: clipCloseLeft 1s ease-out forwards;
+
+                @keyframes filterLeft {
+                    0% {
+                        transform: translateX(0%);
+                    }
+                    50% {
+                        transform: translateX(0%);
+                    }
+                    100% {
+                        transform: translateX(-100%);
+                    }
+                }
+
+                @keyframes rollCloseLeft {
+                    0% {
+                        transform: scaleX(1);
+                    }
+                    50% {
+                        transform: scaleX(1);
+                    }
+                    100% {
+                        transform: scaleX(0);
+                    }
+                }
+
+                @keyframes clipCloseLeft {
+                    //clip-path代表標籤可視範圍並非修改標籤大小
+                    0% {
+                        clip-path: inset(0 0 0 0);
+                    }
+                    50% {
+                        clip-path: inset(0 0 0 0);
+                    }
+                    100% {
+                        clip-path: inset(0 100% 0 0);
+                    }
+                }
+            }
+
+            &.prev{
+                
+                //動畫時間0.8秒
+                animation: clipCloseRight 1s ease-out forwards;
+
+                @keyframes filterRight {
+                    0% {
+                        transform: translateX(0%);
+                    }
+                    50% {
+                        transform: translateX(0%);
+                    }
+                    100% {
+                        transform: translateX(100%);
+                    }
+                }
+
+                @keyframes rollCloseRight {
+                    0% {
+                        transform: scaleX(1);
+                    }
+                    50% {
+                        transform: scaleX(1);
+                    }
+                    100% {
+                        transform: scaleX(0);
+                    }
+                }
+
+                @keyframes clipCloseRight {
+                    //clip-path代表標籤可視範圍並非修改標籤大小
+                    0% {
+                        clip-path: inset(0 0 0 0);
+                    }
+                    50% {
+                        clip-path: inset(0 0 0 0);
+                    }
+                    100% {
+                        clip-path: inset(0 0 0 100%);
+                    }
+                }
+            }
+        }
+
+        
+
+        //圖片設定
+        .imgSet {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        //圖片設定
+
+        //按鈕設定
+        .btnSet{
+            position: relative;
+            z-index: 4;
+            &.prev{
+
+            }
+
+            &.next{
+                
+            }
+
+        }
+        //按鈕設定
+
+    }
+    // 元件外圍
+
+}

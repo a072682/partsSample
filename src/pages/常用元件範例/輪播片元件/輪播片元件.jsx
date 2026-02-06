@@ -9,7 +9,10 @@ import SwiperWithTab from './搭配tab元件swiper範例/SwiperWithTab';
 import SwiperDoubleSample from './大圖連結縮圖版本/SwiperDoubleSample';
 import NoAnimationVer from './無動畫版本/NoAnimationVer';
 import VerticalSwiper from './垂直輪播範例/VerticalSwiper';
+
 import { useState } from 'react';
+import 客製過場動畫化輪播片範例 from './客製過場動畫化輪播片範例/客製過場動畫化輪播片範例';
+import 客製過場動畫化輪播片帶濾鏡範例 from './客製過場動畫化輪播片帶濾鏡範例/客製過場動畫化輪播片帶濾鏡範例';
 
 
 
@@ -58,6 +61,18 @@ export default function 輪播片元件() {
           title:"垂直Swiper範本",
           key:"垂直Swiper",
           pageData:(swiperActiveTab === "垂直Swiper" && <VerticalSwiper />),
+          disabled: false,
+      },
+      {
+          title:"客製過場動畫化輪播片範例",
+          key:"客製過場動畫化輪播片範例",
+          pageData:(swiperActiveTab === "客製過場動畫化輪播片範例" && <客製過場動畫化輪播片範例 />),
+          disabled: false,
+      },
+      {
+          title:"客製過場動畫化輪播片帶濾鏡範例",
+          key:"客製過場動畫化輪播片帶濾鏡範例",
+          pageData:(swiperActiveTab === "客製過場動畫化輪播片帶濾鏡範例" && <客製過場動畫化輪播片帶濾鏡範例 />),
           disabled: false,
       },
   ]

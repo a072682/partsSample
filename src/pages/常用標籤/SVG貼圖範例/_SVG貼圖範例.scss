@@ -1,0 +1,23 @@
+
+/* 元件最外圍 */
+.SVG貼圖範例 {
+    position: relative;
+    overflow: hidden;   // 讓背景不超出容器
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+
+    .svgImgSet{
+        width: 48px;
+        height: 48px;
+        border: 1px solid red;
+        color: red;
+    }
+}
+/* 元件最外圍 */
+
+
+
+
+
+

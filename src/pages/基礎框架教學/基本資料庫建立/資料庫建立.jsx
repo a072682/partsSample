@@ -4,7 +4,7 @@ import './_資料庫建立.scss';//引入指定樣式
 
 import 本地端資料庫建立 from './資料庫本地端建立/本地端資料庫建立';
 import 資料表建立 from './資料表建立方法/資料表建立';
-import 資料庫docker端建立 from './資料庫docker端建立/資料庫docker端建立';
+import 資料庫docker端建立 from './資料庫Docker端建立/資料庫Docker端建立';
 
 
 export default function 資料庫建立() {

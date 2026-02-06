@@ -1,0 +1,63 @@
+
+
+.復數模型展示{
+    width: 100%;
+    height: calc(100dvh - 70px);
+    background-color: rgb(228, 199, 162);
+    position: relative;
+    
+    //元件最外圍
+    .ThreeJsBox{
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+        border-radius: 12px;
+        padding: 10px;
+        background-color: rgb(71, 71, 71);
+        position: relative;
+
+        //顯示模型元件
+        .ThreeJs{
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            // background-color: transparent;
+            // background-image: url('/images/動畫/ThreeJs/bg.jpg');
+            // background-position-y: 0%;
+            // background-position-x: 0%;      /* 左上角 */
+            // background-size: 100% 100%;    /* 寬度填滿，高度等比 */
+            // background-repeat: no-repeat;
+            
+        }
+        //顯示模型元件
+
+        //圖片外圍
+        .imgBox{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            //圖片設定
+            .imgSet{
+                width: 80%;
+                height: 80%;
+                object-fit: cover;
+                pointer-events: none;
+            }
+            //圖片設定
+        }
+        //圖片外圍
+    }
+    //元件最外圍
+
+}

@@ -7,6 +7,9 @@ import StopMotionAnimation from './骨牌動畫/StopMotionAnimation';
 import 跑馬燈動畫範例 from './跑馬燈動畫範例/跑馬燈動畫範例';
 import ThreeJs from './Three.js套件/ThreeJs';
 import FramerMotion from './FramerMotion/FramerMotion';
+import 通道影片範例 from './通道影片範例/通道影片範例';
+import 進退場動畫範例 from './進退場動畫範例/進退場動畫範例';
+import 雜訊介面範例 from './雜訊介面範例/雜訊介面範例';
 
 
 
@@ -55,13 +58,30 @@ export default function 常用動畫元件範例() {
           pageData:<FramerMotion />,
           disabled: false,
       },
-      
+      {
+          title:"通道影片範例",
+          key:"通道影片範例",
+          pageData:(animationActiveTab === "通道影片範例" && <通道影片範例 />),
+          disabled: false,
+      },
+      {
+          title:"進退場動畫範例",
+          key:"進退場動畫範例",
+          pageData:(animationActiveTab === "進退場動畫範例" && <進退場動畫範例 />),
+          disabled: false,
+      },
+      {
+          title:"雜訊介面範例",
+          key:"雜訊介面範例",
+          pageData:(animationActiveTab === "雜訊介面範例" && <雜訊介面範例 />),
+          disabled: false,
+      },
   ]
   //#endregion
 
   return (
-    <section className="按鈕元件">
-      <h2>按鈕元件常用範例</h2>
+    <section className="常用動畫元件範例">
+      <h2>常用動畫元件範例</h2>
       {/* 控制層 顯示元素不存在 */}
       <Tab.Container activeKey={animationActiveTab} onSelect={(key) => setAnimationActiveTab(key)}>
 

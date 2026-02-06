@@ -1,0 +1,60 @@
+
+
+.客製過場動畫化輪播片範例{
+    width: 100%;
+    height: calc(100dvh - 70px);
+    background-color: rgb(228, 199, 162);
+    position: relative;
+
+    .slider {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background: #111;
+    color: white;
+    }
+
+    .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    /* 共用 overlay */
+    .overlay {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    animation: slide 0.6s forwards;
+    z-index: 10;
+    }
+
+    /* 黑色先 */
+    .overlay.black {
+    background: black;
+    }
+
+    /* 黃色後，延遲 */
+    .overlay.yellow {
+    background: #f5c400;
+    animation-delay: 0.3s;
+    z-index: 11;
+    }
+
+    @keyframes slide {
+    to {
+        right: 0;
+        transform: translateX(-100%);
+    }
+    }
+
+    button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    }
+
+}

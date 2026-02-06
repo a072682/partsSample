@@ -74,8 +74,14 @@ function Header(){
                     </motion.div>
 
                     <motion.div variants={itemV}>
-                        <Link to="/RenderServerUpLoad" className='item'>
+                        <Link to="/常用JS函式" className='item'>
                         <p className='text'>常用JS函式</p>
+                        </Link>
+                    </motion.div>
+
+                    <motion.div variants={itemV}>
+                        <Link to="/常用標籤" className='item'>
+                        <p className='text'>常用標籤</p>
                         </Link>
                     </motion.div>
 
