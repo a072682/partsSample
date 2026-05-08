@@ -5,12 +5,12 @@ import './_react_tab.scss';
 import BackGroundAnimation from './背景動畫/back_ground_animation';
 import StopMotionAnimation from './骨牌動畫/stop_motion_animation';
 import 跑馬燈動畫範例 from './跑馬燈動畫範例/跑馬燈動畫範例';
-import threeJs from './threetest.js套件/three_js';
+import threeJs from './three.js套件/three_js';
 import FramerMotion from './framer_motion/framer_motion';
 import 通道影片範例 from './通道影片範例/通道影片範例';
 import 進退場動畫範例 from './進退場動畫範例/進退場動畫範例';
 import 雜訊介面範例 from './雜訊介面範例/雜訊介面範例';
-import gasptest範例 from './gasptest範例/gasptest範例';
+import gasp範例 from './gasp範例/gasp範例';
 
 
 
@@ -77,8 +77,8 @@ export default function 常用動畫元件範例() {
       },
       {
           title:"範例",
-          key:"gasptest範例",
-          pageData:(animationActiveTab === "gasptest範例" && <gasptest範例 />),
+          key:"gasp範例",
+          pageData:(animationActiveTab === "gasp範例" && <gasp範例 />),
           disabled: false,
       },
   ]
