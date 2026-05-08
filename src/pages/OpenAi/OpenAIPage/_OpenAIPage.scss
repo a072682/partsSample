@@ -1,0 +1,273 @@
+
+.OpenAIPage{
+
+    //資料上傳區塊
+    .uploadBox {
+        border: 2px dashed #ccc;
+        border-radius: 12px;
+        padding: 20px;
+        background: #fafafa;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+
+        &:hover {
+            border-color: #007bff;
+            background: #f0f8ff;
+        }
+
+        /* ===== 上方輸入區 ===== */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+
+            &:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+            }
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        /* ===== 上傳按鈕 ===== */
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+
+            &:hover {
+            background: #0056b3;
+            }
+        }
+
+        /* ===== 拖拉提示 ===== */
+        &::before {
+            content: "拖曳檔案到這裡或點擊上傳";
+            display: block;
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        /* ===== 檔案列表 ===== */
+        .fileBox {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* ===== 單個檔案卡片 ===== */
+        .fileItem {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #eee;
+            min-width: 200px;
+            max-width: 260px;
+            gap: 10px;
+            position: relative;
+
+            transition: all 0.2s;
+
+            &:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+            }
+
+            /* icon */
+            .fileIcon {
+            font-size: 24px;
+            }
+
+            /* 檔案資訊 */
+            .fileInfo {
+            flex: 1;
+
+            .fileName {
+                font-size: 13px;
+                font-weight: 600;
+                word-break: break-all;
+            }
+
+            .fileType {
+                font-size: 11px;
+                color: #888;
+            }
+            }
+
+            /* 刪除按鈕 */
+            button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover {
+                color: red;
+            }
+            }
+        }
+        }
+    //資料上傳區塊
+
+    // 詢問AI對話框
+    .askBox {
+        max-width: 900px;
+        margin: auto;
+        // 對話框區塊設定
+        .inputBox {
+            display: flex;
+            align-items: center;
+            background: #2f2f2f;
+            border-radius: 25px;
+            padding: 10px;
+            gap: 10px;
+
+            // 左側新增檔案按鈕
+            .addFileBtn {
+                cursor: pointer;
+                color: #ccc;
+            }
+            // 左側新增檔案按鈕
+
+            //中間區塊
+            .contentArea {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                //檔案預覽區塊
+                .fileBox {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+
+                    // 檔案顯示區塊
+                    .fileItem {
+                        display: flex;
+                        align-items: center;
+                        background: #444;
+                        border-radius: 12px;
+                        padding: 6px 10px;
+                        gap: 8px;
+
+                        .thumbnail {
+                            width: 40px;
+                            height: 40px;
+                            object-fit: cover;
+                            border-radius: 6px;
+                        }
+
+                        .fileIcon {
+                            font-size: 20px;
+                        }
+
+                        .fileInfo {
+                            .fileName {
+                            color: white;
+                            font-size: 13px;
+                            }
+
+                            .fileType {
+                            color: #aaa;
+                            font-size: 11px;
+                            }
+                        }
+
+                        .actions {
+                            display: flex;
+                            gap: 4px;
+
+                            button {
+                            background: transparent;
+                            border: none;
+                            color: #ccc;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: white;
+                            }
+                            }
+                        }
+                    }
+                    // 檔案顯示區塊
+                }
+                //檔案預覽區塊
+
+                // 文字輸入
+                .textInput {
+                    border: none;
+                    background: transparent;
+                    color: white;
+                    outline: none;
+                }
+                // 文字輸入
+            }
+            //中間區塊
+
+            // 發送按鈕
+            .sendBtn {
+                background: white;
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                border: none;
+                cursor: pointer;
+            }
+            // 發送按鈕
+        }
+        // 對話框區塊設定
+    }
+    // 詢問AI對話框
+
+    //
+    .chatContainer{
+
+        .chatBox{
+
+            .chatReply{
+                white-space: pre-wrap;
+
+                .codeBlock {
+                    margin: 12px 0;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    background: #1e1e1e;
+
+                    .codeHeader {
+                        background: #2d2d2d;
+                        color: #ccc;
+                        font-size: 12px;
+                        padding: 6px 10px;
+                        text-transform: lowercase;
+                    }
+                }
+            }
+        }
+    }
+}

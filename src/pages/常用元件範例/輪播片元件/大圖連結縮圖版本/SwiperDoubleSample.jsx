@@ -1,6 +1,10 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { Tab, Nav, Accordion } from 'react-bootstrap';
-import './_SwiperDoubleSample.scss'; // 引入強化樣式
+// 引入SCSS樣式
+import './_SwiperDoubleSample.scss'; 
+// 引入靜態資料與邏輯資料
+import { tabData } from './_SwiperDoubleSample.data';
+import { useSwiperDouble } from './_SwiperDoubleSample.hook';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,175 +12,45 @@ import 'swiper/css/effect-fade';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation,EffectFade } from 'swiper/modules';
 
-import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
-import Prism from 'prismjs';                // 核心功能
-import 'prismjs/components/prism-jsx';      // JSX 支援
-import 'prismjs/components/prism-markup';   // HTML 支援
-import dedent from 'dedent';//去除多餘空白保持縮排格式
+// 主題樣式
+import 'prismjs/themes/prism-tomorrow.css'; 
+// 核心功能
+import Prism from 'prismjs';    
+// JSX 支援            
+import 'prismjs/components/prism-jsx';    
+// HTML 支援  
+import 'prismjs/components/prism-markup';  
+//去除多餘空白保持縮排格式 
+import dedent from 'dedent';
+
+
 
 export default function SwiperDoubleSample() {
 
     //#region
     //#endregion
 
-    //#region 縮圖輪播顯示資料
-    const ThumbSwiperData01 = [
-        {
-            id:"1-1",
-            imgSm:`/images/swiper/背景圖連結縮圖範例/factions1_nav1.jpg`,
-            role:`/images/swiper/背景圖連結縮圖範例/factions1_role1_des.png`,
-            video:`/images/swiper/背景圖連結縮圖範例/nte_pbgv_nanali_20250513_opt.webm`,
-        },
-        {
-            id:"1-2",
-            imgSm:`/images/swiper/背景圖連結縮圖範例/factions1_nav2.jpg`,
-            role:`/images/swiper/背景圖連結縮圖範例/factions1_role2_des.png`,
-            video:`/images/swiper/背景圖連結縮圖範例/nte_pbgv_zaowu_20250513_opt.webm`,
-        },
-        {
-            id:"1-3",
-            imgSm:`/images/swiper/背景圖連結縮圖範例/factions1_nav3.jpg`,
-            role:`/images/swiper/背景圖連結縮圖範例/factions1_role3_des.png`,
-            video:`/images/swiper/背景圖連結縮圖範例/nte_pbgv_nanzhu_20250621_opt.webm`,
-        },
-        {
-            id:"1-4",
-            imgSm:`/images/swiper/背景圖連結縮圖範例/factions1_nav4.jpg`,
-            role:`/images/swiper/背景圖連結縮圖範例/factions1_role3_des.png`,
-            video:`/images/swiper/背景圖連結縮圖範例/nte_pbgv_nvzhu_20250621_opt.webm`,
-        },
-    ];
-
-    const w_ThumbSwiperData01 = [...ThumbSwiperData01,...ThumbSwiperData01,...ThumbSwiperData01];
-
-    const ThumbSwiperData02 = [
-        {
-            id:"2-1",
-            imgSm:`/images/swiper/背景圖連結縮圖範例/factions2_nav1.jpg`,
-            role:`/images/swiper/背景圖連結縮圖範例/factions2_role1_des.png`,
-            video:`/images/swiper/背景圖連結縮圖範例/nte_pbgv_bohe_20250513_opt.webm`,
-        },
-        {
-            id:"2-2",
-            imgSm:`/images/swiper/背景圖連結縮圖範例/factions2_nav2.jpg`,
-            role:`/images/swiper/背景圖連結縮圖範例/factions2_role2_des.png`,
-            video:`/images/swiper/背景圖連結縮圖範例/nte_pbgv_anhunqu_20250513_opt.webm`,
-        },
-        {
-            id:"2-3",
-            imgSm:`/images/swiper/背景圖連結縮圖範例/factions2_nav3.jpg`,
-            role:`/images/swiper/背景圖連結縮圖範例/factions2_role3_des.png`,
-            video:`/images/swiper/背景圖連結縮圖範例/nte_pbgv_fadiya_20250513_opt.webm`,
-        },
-        {
-            id:"2-4",
-            imgSm:`/images/swiper/背景圖連結縮圖範例/factions2_nav4.jpg`,
-            role:`/images/swiper/背景圖連結縮圖範例/factions2_role4_des.png`,
-            video:`/images/swiper/背景圖連結縮圖範例/nte_pbgv_baizang_20250621_opt.webm`,
-        },
-    ];
-
-    const w_ThumbSwiperData02 = [...ThumbSwiperData02,...ThumbSwiperData02,...ThumbSwiperData02];
+    //#region 引入狀態
+    const {
+        // tab狀態
+        activeTab, 
+        setActiveTab,
+        // 主輪播片狀態
+        mainSwiper, 
+        setMainSwiper,
+        // 縮圖輪播片狀態
+        thumbSwiper, 
+        setThumbSwiper,
+        // 左右按鈕
+        prevRefs, nextRefs,
+        // 冷卻時間狀態
+        cooldown,
+        // 上一頁&下一頁函式
+        handlePrevClick, handleNextClick,
+    } = useSwiperDouble();
     //#endregion
 
-    //#region tab控制
-    const [activeTab, setActiveTab] = useState('01');
-    //#endregion
-
-    //#region tab顯示資料
-    const tabData = [
-        {
-            key:"01",
-            class:"tabBtn01",
-            swiperData:w_ThumbSwiperData01,
-        },
-        {
-            key:"02",
-            class:"tabBtn02",
-            swiperData:w_ThumbSwiperData02,
-        },
-    ]
-    //#endregion
-
-    //#region 左右按鈕宣告
-    const prevRefs = useRef([]);
-    const nextRefs = useRef([]);
-    //#endregion
-
-    //#region 主輪播片儲存狀態宣告
-    const [mainSwiper,setMainSwiper] = useState(null);
-    //#endregion
-
-    //#region 縮圖輪播片儲存狀態宣告
-    const [thumbSwiper,setThumbSwiper] = useState(null);
-    //#endregion
-    
-    //#region 將左右按鈕重新綁定給縮圖輪播片
-    useEffect(() => {
-        //如果沒有抓到輪播片資料則跳出程序
-        if (!thumbSwiper || !mainSwiper) {
-            return;
-        }
-        if (thumbSwiper) {
-
-            // 取得index數字
-            const index = tabData.findIndex(tab => tab.key === activeTab);
-
-            //將swiper資料指定給swiper
-            const swiper = thumbSwiper;
-
-            // 重新綁定 navigation
-            swiper.params.navigation.prevEl = prevRefs.current[index];
-            swiper.params.navigation.nextEl = nextRefs.current[index];
-            
-            // 重新初始化 navigation（重要）
-            swiper.navigation.init();
-            swiper.navigation.update();
-        }
-    }, [thumbSwiper]);
-    //#endregion
-
-    //#region 宣告冷卻儲存狀態
-    const [cooldown, setCooldown] = useState(false);
-    //#endregion
-
-    //#region 宣告處理上一張函式
-    const handlePrevClick = () => {
-        // 正在冷卻
-        if (cooldown) {
-            return;
-        }         
-        // 進入冷卻
-        setCooldown(true);
-        //縮圖輪播片上一頁          
-        thumbSwiper?.slidePrev();
-        //主輪播片上一頁
-        mainSwiper?.slidePrev();
-
-        // 冷卻結束（例如 300ms）
-        setTimeout(() => setCooldown(false), 500);
-    };
-    //#endregion
-
-    //#region 宣告處理下一張函式
-    const handleNextClick = () => {
-        // 正在冷卻
-        if (cooldown) {
-            return;
-        }           
-        // 進入冷卻
-        setCooldown(true);
-        //縮圖輪播片下一頁            
-        thumbSwiper?.slideNext();
-        //主輪播片下一頁
-        mainSwiper?.slideNext();
-
-        // 冷卻結束（例如 300ms）
-        setTimeout(() => setCooldown(false), 500);
-    };
-    //#endregion
-
-  return (
+    return (
     <>
         <article className='縮圖swiper連結大圖swiper範例'>
             <h3>縮圖swiper連結大圖swiper範例</h3>
@@ -273,7 +147,8 @@ export default function SwiperDoubleSample() {
                         {/* Tab 內容區 */}
                     </div>
                     {/* 背景顯示區塊 */}
-
+                    
+                    {/* tab按鈕&縮圖顯示區塊 */}
                     <div className='d-flex box'>
                         {/* tab顯示區塊 */}
                         <div className='tabViewBox'>
@@ -390,6 +265,7 @@ export default function SwiperDoubleSample() {
                         </div>
                         {/* 縮圖顯示區塊 */}
                     </div>
+                    {/* tab按鈕&縮圖顯示區塊 */}
                 </article>
                 {/* 元件最外層 */}
             </Tab.Container>
@@ -1046,7 +922,7 @@ export default function SwiperDoubleSample() {
             </Accordion.Item>
         </Accordion>
     </>
-    
-  );
+
+    );
 }
 

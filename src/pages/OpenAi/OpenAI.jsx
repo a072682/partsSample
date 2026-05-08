@@ -1,41 +1,32 @@
 import { Tab, Nav } from 'react-bootstrap';//宣告元件
 import { useEffect, useState } from 'react';//宣告狀態
-import './_常用系統範例.scss';//引入指定樣式
-
-import 文章系統 from './文章系統/文章系統';
-import 雲端圖片存儲系統 from './雲端圖片存儲系統/雲端圖片存儲系統';
-import 會員系統 from './會員系統/會員系統';
+import './_OpenAI.scss';//引入指定樣式
+import OpenAIPage from './OpenAIPage/OpenAIPage';
+import AIAgent from './AIAgent/AIAgent.JSX';
 
 
+export default function OpenAI() {
 
-export default function 常用系統範例() {
-
-    const [activeTab, setActiveTab] = useState('會員系統');//預設開啟的頁面
+    const [activeTab, setActiveTab] = useState('OpenAI');//預設開啟的頁面
 
     const tabdata = [ //將資料分離讓程式碼可以用.map讓程式碼更加簡潔
         {
-            title:"會員系統",
-            key:"會員系統",
-            pageData:<會員系統 />,
+            title:"OpenAI",
+            key:"OpenAI",
+            pageData:<OpenAIPage />,
             disabled: false,
         },
         {
-            title:"文章系統",
-            key:"文章系統",
-            pageData:<文章系統 />,
-            disabled: false,
-        },
-        {
-            title:"雲端圖片存儲系統",
-            key:"雲端圖片存儲系統",
-            pageData:<雲端圖片存儲系統 />,
+            title:"AIAgent",
+            key:"AIAgent",
+            pageData:<AIAgent />,
             disabled: false,
         },
     ]
 
     return (
         <>
-        <div className='常用系統範例'>
+        <div className='OpenAI範例'>
             {/* 最外框 */}
             <div className="appTabs">
                 {/* 控制層 顯示元素不存在 */}
@@ -96,6 +87,7 @@ export default function 常用系統範例() {
             </div>
             {/* 最外框 */}
         </div>
+        
         </>
     );
 }

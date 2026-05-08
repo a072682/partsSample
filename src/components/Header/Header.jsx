@@ -112,6 +112,14 @@ function Header(){
                         <p className='text'>教學 & 設定</p>
                         </Link>
                     </motion.div>
+
+                    <motion.div variants={itemV}>
+                        <Link to="/OpenAI" className='item'>
+                        <p className='text'>OpenAI</p>
+                        <p className='text'>AI測試</p>
+                        </Link>
+                    </motion.div>
+                    
                 </motion.div>
             </motion.div>
             

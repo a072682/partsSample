@@ -14,6 +14,7 @@ import 伺服器雲端上傳 from "../pages/伺服器雲端上傳設定/伺服�
 import 資料庫雲端上傳 from "../pages/資料庫雲端上傳設定/資料庫雲端上傳";
 import 常用JS函式 from "../pages/常用JS函式/常用JS函式";
 import 常用標籤 from "../pages/常用標籤/常用標籤";
+import OpenAI from "../pages/OpenAi/OpenAI.JSX";
 
 
 
@@ -66,6 +67,10 @@ const router = createHashRouter([ //createHashRouter為建立router的方法
             {
                 path: "verify",
                 element: <VerifyEmailPage />,
+            },
+            {
+                path: "OpenAI",
+                element: <OpenAI />,
             },
         ],
 	}

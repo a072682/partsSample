@@ -10,6 +10,7 @@ import FramerMotion from './FramerMotion/FramerMotion';
 import 通道影片範例 from './通道影片範例/通道影片範例';
 import 進退場動畫範例 from './進退場動畫範例/進退場動畫範例';
 import 雜訊介面範例 from './雜訊介面範例/雜訊介面範例';
+import GASP範例 from './GASP範例/GASP範例.JSX';
 
 
 
@@ -74,6 +75,12 @@ export default function 常用動畫元件範例() {
           title:"雜訊介面範例",
           key:"雜訊介面範例",
           pageData:(animationActiveTab === "雜訊介面範例" && <雜訊介面範例 />),
+          disabled: false,
+      },
+      {
+          title:"GASP範例",
+          key:"GASP範例",
+          pageData:(animationActiveTab === "GASP範例" && <GASP範例 />),
           disabled: false,
       },
   ]
