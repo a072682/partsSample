@@ -10,7 +10,7 @@ import FramerMotion from './framer_motion/framer_motion';
 import 通道影片範例 from './通道影片範例/通道影片範例';
 import 進退場動畫範例 from './進退場動畫範例/進退場動畫範例';
 import 雜訊介面範例 from './雜訊介面範例/雜訊介面範例';
-import GASP範例 from './GASP範例/GASP範例.JSX';
+import gasp範例 from './gasp範例/gasp範例';
 
 
 

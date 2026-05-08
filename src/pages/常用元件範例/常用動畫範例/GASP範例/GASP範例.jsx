@@ -1,5 +1,5 @@
 
-import './_GASP範例.scss';
+import './_gasp範例.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

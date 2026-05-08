@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python rename_to_snake.py)",
+      "Bash(grep -v \"\\\\\\\\\\\\\\\\|/[A-Za-z]*[一-鿿]\")"
+    ]
+  }
+}
