@@ -1,10 +1,10 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { Tab, Nav, Accordion } from 'react-bootstrap';
 // 引入SCSS樣式
-import './_SwiperDoubleSample.scss'; 
+import './_swiper_double_sample.scss'; 
 // 引入靜態資料與邏輯資料
-import { tabData } from './_SwiperDoubleSample.data';
-import { useSwiperDouble } from './_SwiperDoubleSample.hook';
+import { tabData } from './_swiper_double_sample.data';
+import { useSwiperDouble } from './_swiper_double_sample.hook';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -288,7 +288,7 @@ export default function SwiperDoubleSample() {
                                     `
                                     import { Fragment, useEffect, useRef, useState } from 'react';//宣告狀態
                                     import { Tab, Nav } from 'react-bootstrap';//宣告tab元件
-                                    import './_SwiperDoubleSample.scss'; // 引入強化樣式
+                                    import './_swiper_double_sample.scss'; // 引入強化樣式
 
                                     import 'swiper/css';//引入基本swiper樣式
                                     import 'swiper/css/navigation';//引入模組樣式

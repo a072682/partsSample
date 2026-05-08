@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Collapse } from 'react-bootstrap';
-import './_ReactBsCollapse.scss';
-import DefaultCollapse from './DefaultCollapse/DefaultCollapse';
-import CustomCollapse from '../../../常用元件範例/CollapsePage/CustomCollapse/CustomCollapse';
+import './_react_bs_collapse.scss';
+import DefaultCollapse from './default_collapse/default_collapse';
+import CustomCollapse from '../../../常用元件範例/collapse_page/custom_collapse/custom_collapse';
 
 
 export default function ReactBsCollapse() {

@@ -1,5 +1,5 @@
-import OriginalCollapse from "./OriginalCollapse/OriginalCollapse";
-import ReactBsCollapse from "./ReactBsCollapse/ReactBsCollapse";
+import OriginalCollapse from "./original_collapse/original_collapse";
+import ReactBsCollapse from "./react_bs_collapse/react_bs_collapse";
 
 
 

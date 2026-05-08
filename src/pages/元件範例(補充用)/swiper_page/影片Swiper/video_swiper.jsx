@@ -4,7 +4,7 @@ import 'swiper/css/thumbs';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Thumbs, Navigation } from 'swiper/modules';
-import './_VideoSwiper.scss'; // 引入強化樣式
+import './_video_swiper.scss'; // 引入強化樣式
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
 import 'prismjs/components/prism-jsx';      // JSX 支援
@@ -288,7 +288,7 @@ export default function VideoSwiper() {
                                     import 'swiper/css';//宣告基礎樣式
                                     import { Swiper, SwiperSlide } from 'swiper/react';//宣告元件
                                     import { Navigation, Pagination } from 'swiper/modules';//宣告使用的模組
-                                    import './_DefaultSwiper.scss'; //讀取樣式
+                                    import './_default_swiper.scss'; //讀取樣式
                                     
 
                                     // 元件本體

@@ -2,7 +2,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import './_TriggerBoxAnimation.scss';
+import './_trigger_box_animation.scss';
 
 import { Accordion } from 'react-bootstrap';
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
@@ -12,7 +12,7 @@ import 'prismjs/components/prism-markup';   // HTML 支援
 import dedent from 'dedent';//去除多餘空白保持縮排格式
 
 import { useRef } from "react";
-import TestBox from "./TestBox/TestBox";
+import TestBox from "./test_box/test_box";
 
 
 
@@ -99,7 +99,7 @@ export default function TriggerBoxAnimation() {
                         dedent(
                             `
                             import { motion } from "framer-motion";//宣告元件
-                            import './_DefaultExample.scss';//讀取樣式
+                            import './_default_example.scss';//讀取樣式
 
                             // 元件設定
                             // 放置於return上方

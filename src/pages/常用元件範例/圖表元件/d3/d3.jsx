@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { Tab, Nav } from 'react-bootstrap';
-import D3DonutChart from "./圓環圖/D3DonutChart";
-import D3BarChart from "./長條圖/D3BarChart";
-import D3LineChart from "./折線圖/D3LineChart";
-import D3DonutChartText from "./圓環圖/D3DonutChartText";
-import D3BarChartSText from "./長條圖/D3BarChartSText";
-import D3LineChartText from "./折線圖/D3LineChartText";
+import D3DonutChart from "./圓環圖/d3_donut_chart";
+import D3BarChart from "./長條圖/d3_bar_chart";
+import D3LineChart from "./折線圖/d3_line_chart";
+import D3DonutChartText from "./圓環圖/d3_donut_chart_text";
+import D3BarChartSText from "./長條圖/d3_bar_chart_s_text";
+import D3LineChartText from "./折線圖/d3_line_chart_text";
 
 
 

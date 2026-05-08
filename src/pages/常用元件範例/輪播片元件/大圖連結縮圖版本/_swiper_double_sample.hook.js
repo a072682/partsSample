@@ -5,7 +5,7 @@
 // 引入狀態
 import { useEffect, useRef, useState } from 'react';
 // 引入靜態資料
-import { tabData } from './_SwiperDoubleSample.data';
+import { tabData } from './_swiper_double_sample.data';
 //#endregion
 
 //#region

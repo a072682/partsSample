@@ -2,7 +2,7 @@
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
 import { Accordion } from 'react-bootstrap';
-import './_ReactTab.scss';
+import './_react_tab.scss';
 
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能

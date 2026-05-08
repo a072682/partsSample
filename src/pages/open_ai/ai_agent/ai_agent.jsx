@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./_AIAgent.scss";
+import "./_ai_agent.scss";
 
 function AIAgent() {
 

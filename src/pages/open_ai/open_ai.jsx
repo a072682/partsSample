@@ -1,8 +1,8 @@
 import { Tab, Nav } from 'react-bootstrap';//宣告元件
 import { useEffect, useState } from 'react';//宣告狀態
-import './_OpenAI.scss';//引入指定樣式
-import OpenAIPage from './OpenAIPage/OpenAIPage';
-import AIAgent from './AIAgent/AIAgent.JSX';
+import './_open_ai.scss';//引入指定樣式
+import OpenAIPage from './open_ai_page/open_ai_page';
+import AIAgent from './ai_agent/ai_agent';
 
 
 export default function OpenAI() {

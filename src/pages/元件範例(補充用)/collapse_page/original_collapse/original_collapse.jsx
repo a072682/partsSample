@@ -1,4 +1,4 @@
-import './_OriginalCollapse.scss';
+import './_original_collapse.scss';
 
 export default function OriginalCollapse() {
   return (

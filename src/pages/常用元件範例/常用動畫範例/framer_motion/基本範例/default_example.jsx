@@ -2,7 +2,7 @@
 
 
 import { motion } from "framer-motion";
-import './_DefaultExample.scss';
+import './_default_example.scss';
 
 import { Accordion } from 'react-bootstrap';
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
@@ -76,7 +76,7 @@ export default function DefaultExample() {
                                     dedent(
                                         `
                                         import { motion } from "framer-motion";//宣告元件
-                                        import './_DefaultExample.scss';//讀取樣式
+                                        import './_default_example.scss';//讀取樣式
 
                                         // 元件本體
                                         // 放置於return下方

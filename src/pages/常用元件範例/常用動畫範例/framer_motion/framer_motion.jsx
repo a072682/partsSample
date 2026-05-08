@@ -1,10 +1,10 @@
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import './_ReactTab.scss';
+import './_react_tab.scss';
 
-import DefaultExample from './基本範例/DefaultExample';
-import TriggerEnterAnimation from './進場立即觸發/TriggerEnterAnimation';
+import DefaultExample from './基本範例/default_example';
+import TriggerEnterAnimation from './進場立即觸發/trigger_enter_animation';
 import 觸發型範例 from './觸發型範例/觸發型範例';
 
 

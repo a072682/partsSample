@@ -1,4 +1,4 @@
-import CustomCollapse from "./CustomCollapse/CustomCollapse";
+import CustomCollapse from "./custom_collapse/custom_collapse";
 
 
 

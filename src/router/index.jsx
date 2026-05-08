@@ -2,9 +2,9 @@
 
 
 import { createHashRouter } from "react-router-dom";
-import FrontLayout from "../layouts/FrontLayout";
-import Index from "../pages/Index";
-import VerifyEmailPage from "../pages/ApiPage/VerifyEmailPage";
+import FrontLayout from "../layouts/front_layout";
+import Index from "../pages/index";
+import VerifyEmailPage from "../pages/api_page/verify_email_page";
 import 切版 from "../pages/切版/切版";
 import 常用元件範例 from "../pages/常用元件範例/常用元件範例";
 import 基礎框架 from "../pages/基礎框架教學/基礎框架";
@@ -14,7 +14,7 @@ import 伺服器雲端上傳 from "../pages/伺服器雲端上傳設定/伺服�
 import 資料庫雲端上傳 from "../pages/資料庫雲端上傳設定/資料庫雲端上傳";
 import 常用JS函式 from "../pages/常用JS函式/常用JS函式";
 import 常用標籤 from "../pages/常用標籤/常用標籤";
-import OpenAI from "../pages/OpenAi/OpenAI.JSX";
+import OpenAI from "../pages/open_ai/open_ai";
 
 
 

@@ -1,6 +1,6 @@
 import { Tab, Nav } from 'react-bootstrap';//宣告元件
 import { useEffect, useState } from 'react';//宣告狀態
-import RenderServerUpLoad from './Render/RenderServerUpLoad';
+import RenderServerUpLoad from './render/render_server_up_load';
 
 
 export default function 伺服器雲端上傳() {

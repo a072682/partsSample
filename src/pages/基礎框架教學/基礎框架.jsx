@@ -3,9 +3,9 @@ import { useState } from 'react';
 import './_基礎框架.scss';
 
 
-import ReactBasic from './ReactBasic/ReactBasic';
-import NextBasic from './NextBasic/NextBasic';
-import NodeJsExpressBasic from './NodeJsExpressBasic/NodeJsExpressBasic';
+import ReactBasic from './react_basic/react_basic';
+import NextBasic from './next_basic/next_basic';
+import NodeJsExpressBasic from './node_js_express_basic/node_js_express_basic';
 import 資料庫建立 from './基本資料庫建立/資料庫建立';
 
 

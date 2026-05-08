@@ -1,5 +1,5 @@
 import { Accordion } from 'react-bootstrap';
-import './_CustomAccordion.scss';
+import './_custom_accordion.scss';
 
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
@@ -51,7 +51,7 @@ export default function CustomAccordion() {
                             dedent(
                                 `
                                 import { Accordion } from 'react-bootstrap'; //宣告元件
-                                import './_CustomAccordion.scss';//讀取樣式
+                                import './_custom_accordion.scss';//讀取樣式
 
                                 // 元件本體
                                 // 放置於return下方

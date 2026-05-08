@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
-import './_Apitest.scss';
+import './_apitest.scss';
 import ReCAPTCHA from "react-google-recaptcha";//v2
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';//v3
 

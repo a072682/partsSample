@@ -1,12 +1,12 @@
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import './_ReactTab.scss';
+import './_react_tab.scss';
 
-import BackGroundAnimation from './背景動畫/BackGroundAnimation';
-import StopMotionAnimation from './骨牌動畫/StopMotionAnimation';
+import BackGroundAnimation from './背景動畫/back_ground_animation';
+import StopMotionAnimation from './骨牌動畫/stop_motion_animation';
 import 跑馬燈動畫範例 from './跑馬燈動畫範例/跑馬燈動畫範例';
-import ThreeJs from './Three.js套件/ThreeJs';
-import FramerMotion from './FramerMotion/FramerMotion';
+import ThreeJs from './three.js套件/three_js';
+import FramerMotion from './framer_motion/framer_motion';
 import 通道影片範例 from './通道影片範例/通道影片範例';
 import 進退場動畫範例 from './進退場動畫範例/進退場動畫範例';
 import 雜訊介面範例 from './雜訊介面範例/雜訊介面範例';

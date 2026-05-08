@@ -73,7 +73,7 @@ export default function 圓角按鈕範例() {
                                     dedent(
                                         `
                                         import { Link } from 'react-router-dom';//宣告連結元件
-                                        import './_MessageItem.scss';//讀取樣式
+                                        import './_message_item.scss';//讀取樣式
 
                                         //元件前置宣告
                                         //放置於return上方

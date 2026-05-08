@@ -1,4 +1,4 @@
-import './OriginalAccordion.scss';
+import './original_accordion.scss';
 import { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 

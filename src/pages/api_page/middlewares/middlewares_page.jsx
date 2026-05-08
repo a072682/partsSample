@@ -1,10 +1,10 @@
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import AllowRoles from './AllowRoles';
-import ValidateSchema from './ValidateSchema';
-import Verifycookie from './Verifycookie';
-import VerifyToken from './VerifyToken';
+import AllowRoles from './allow_roles';
+import ValidateSchema from './validate_schema';
+import Verifycookie from './verifycookie';
+import VerifyToken from './verify_token';
 
 
 

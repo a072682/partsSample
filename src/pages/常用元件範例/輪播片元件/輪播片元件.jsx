@@ -3,12 +3,12 @@
 import { Tab, Nav } from 'react-bootstrap';
 import './_swiperTab.scss';
 
-import DefaultSwiper from './預設基礎Swiper範本/DefaultSwiper';
-import EffectFadeSwiper from './淡入淡出版本/EffectFadeSwiper';
-import SwiperWithTab from './搭配tab元件swiper範例/SwiperWithTab';
-import SwiperDoubleSample from './大圖連結縮圖版本/SwiperDoubleSample';
-import NoAnimationVer from './無動畫版本/NoAnimationVer';
-import VerticalSwiper from './垂直輪播範例/VerticalSwiper';
+import DefaultSwiper from './預設基礎Swiper範本/default_swiper';
+import EffectFadeSwiper from './淡入淡出版本/effect_fade_swiper';
+import SwiperWithTab from './搭配tab元件swiper範例/swiper_with_tab';
+import SwiperDoubleSample from './大圖連結縮圖版本/swiper_double_sample';
+import NoAnimationVer from './無動畫版本/no_animation_ver';
+import VerticalSwiper from './垂直輪播範例/vertical_swiper';
 
 import { useState } from 'react';
 import 客製過場動畫化輪播片範例 from './客製過場動畫化輪播片範例/客製過場動畫化輪播片範例';

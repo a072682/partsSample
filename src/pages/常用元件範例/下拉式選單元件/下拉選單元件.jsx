@@ -1,5 +1,5 @@
 import { section } from "framer-motion/client"
-import ReactCustomDropdown from "./ReactCustomDropdown/ReactCustomDropdown";
+import ReactCustomDropdown from "./react_custom_dropdown/react_custom_dropdown";
 
 
 

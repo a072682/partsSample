@@ -1,10 +1,10 @@
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import GoogleAuthRoutes from './GoogleAuthRoutes';
-import ProductsRoutes from './ProductsRoutes';
-import UploadRoutes from './UploadRoutes';
-import UserRoutes from './UserRoutes';
+import GoogleAuthRoutes from './google_auth_routes';
+import ProductsRoutes from './products_routes';
+import UploadRoutes from './upload_routes';
+import UserRoutes from './user_routes';
 
 
 

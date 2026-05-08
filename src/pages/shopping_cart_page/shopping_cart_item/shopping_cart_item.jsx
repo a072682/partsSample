@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import './_ShoppingCartItem.scss';
+import './_shopping_cart_item.scss';
 import { Accordion } from 'react-bootstrap';
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
@@ -235,7 +235,7 @@ export default function ShoppingCartItem() {
                                       dedent(
                                           `
                                           import { useEffect, useMemo, useRef, useState } from 'react';//宣告狀態
-                                          import './_ShoppingCartItem.scss';//讀取樣式
+                                          import './_shopping_cart_item.scss';//讀取樣式
 
                                           // 設定檔放置於return上方
                                             // 1) 假資料（你之後可換成 Redux/props/後端資料）

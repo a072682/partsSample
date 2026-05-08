@@ -1,5 +1,5 @@
-import BootstrapTabs from "./BootstrapTabs/BootstrapTabs";
-import ReactTab from "../../常用元件範例/TabPage/ReactTab分頁元件/ReactTab";
+import BootstrapTabs from "./bootstrap_tabs/bootstrap_tabs";
+import ReactTab from "../../常用元件範例/tab_page/ReactTab分頁元件/react_tab";
 
 
 export default function TabPage() {

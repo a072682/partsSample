@@ -1,8 +1,8 @@
 
 
 
-import OriginalAccordion from "./OriginalAccordion/OriginalAccordion";
-import ReactBsAccordion from "./ReactBsAccordion/ReactBsAccordion";
+import OriginalAccordion from "./original_accordion/original_accordion";
+import ReactBsAccordion from "./react_bs_accordion/react_bs_accordion";
 
 export default function Accordion() {
   return (

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Accordion } from 'react-bootstrap';
-import './_VerticalImgAccordion.scss';
+import './_vertical_img_accordion.scss';
 
 
 export default function VerticalImgAccordion() {

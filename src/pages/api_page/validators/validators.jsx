@@ -1,7 +1,7 @@
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import ProductValidator from './ProductValidator';
+import ProductValidator from './product_validator';
 
 
 

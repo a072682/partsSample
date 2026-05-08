@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './_ReactCustomDropdown.scss';
+import './_react_custom_dropdown.scss';
 import { Accordion, Dropdown } from 'react-bootstrap';
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
@@ -86,7 +86,7 @@ function ReactCustomDropdown() {
                           dedent(
                               `
                               import { useEffect, useState } from 'react';//宣告狀態
-                              import './_ReactCustomDropdown.scss';//讀取樣式
+                              import './_react_custom_dropdown.scss';//讀取樣式
                               import { Dropdown } from 'react-bootstrap';//宣告元件
                               
                               // 設定檔放置於return上方

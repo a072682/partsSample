@@ -4,7 +4,7 @@ import 'swiper/css/thumbs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, FreeMode, Thumbs } from 'swiper/modules';
 import { useState } from 'react';
-import './_ThumbsSwiper.scss';
+import './_thumbs_swiper.scss';
 
 // 假資料：可換成你的圖片
 const images = [

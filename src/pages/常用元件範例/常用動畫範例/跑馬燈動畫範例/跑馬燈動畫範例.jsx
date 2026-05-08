@@ -1,7 +1,7 @@
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import './_ReactTab.scss';
+import './_react_tab.scss';
 import 跑馬燈範例一 from './範例一/跑馬燈範例一';
 import 跑馬燈範例二 from './範例二/跑馬燈範例二';
 

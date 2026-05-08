@@ -1,6 +1,6 @@
 
-import CustomDropdown from "./CustomDropdown/CustomDropdown";
-import ReactCustomDropdown from "../../常用元件範例/DropdownPage/ReactCustomDropdown/ReactCustomDropdown";
+import CustomDropdown from "./custom_dropdown/custom_dropdown";
+import ReactCustomDropdown from "../../常用元件範例/dropdown_page/react_custom_dropdown/react_custom_dropdown";
 
 
 

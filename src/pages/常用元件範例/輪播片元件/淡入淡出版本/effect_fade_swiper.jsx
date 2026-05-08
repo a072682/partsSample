@@ -1,7 +1,7 @@
 import 'swiper/css/effect-fade';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation, Pagination } from 'swiper/modules';
-import './_EffectFadeSwiper.scss'; // 引入強化樣式
+import './_effect_fade_swiper.scss'; // 引入強化樣式
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
 import 'prismjs/components/prism-jsx';      // JSX 支援
@@ -124,7 +124,7 @@ export default function EffectFadeSwiper() {
                                     import 'swiper/css/effect-fade';//宣告樣式
                                     import { Swiper, SwiperSlide } from 'swiper/react';//宣告元件
                                     import { EffectFade, Navigation, Pagination } from 'swiper/modules';//宣告使用的模組
-                                    import './_EffectFadeSwiper.scss'; //讀取樣式
+                                    import './_effect_fade_swiper.scss'; //讀取樣式
                                     
                                     //資料設定檔
                                     //放置於return上方

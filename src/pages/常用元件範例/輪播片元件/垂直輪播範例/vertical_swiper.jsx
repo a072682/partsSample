@@ -10,9 +10,9 @@ import 'prismjs/components/prism-markup';   // HTML 支援
 import dedent from 'dedent';//去除多餘空白保持縮排格式
 import { Accordion } from 'react-bootstrap';
 import { useRef } from 'react';
-import TestIndex from './測試首頁/TestIndex';
-import TestPage01 from './測試頁面01/TestPage01';
-import TestPage02 from './測試頁面02/TestPage02';
+import TestIndex from './測試首頁/test_index';
+import TestPage01 from './測試頁面01/test_page01';
+import TestPage02 from './測試頁面02/test_page02';
 
 export default function VerticalSwiper() {
 
@@ -110,7 +110,7 @@ export default function VerticalSwiper() {
                                     import 'swiper/css/effect-fade';//宣告樣式
                                     import { Swiper, SwiperSlide } from 'swiper/react';//宣告元件
                                     import { EffectFade, Navigation, Pagination } from 'swiper/modules';//宣告使用的模組
-                                    import './_EffectFadeSwiper.scss'; //讀取樣式
+                                    import './_effect_fade_swiper.scss'; //讀取樣式
                                     
                                     //資料設定檔
                                     //放置於return上方

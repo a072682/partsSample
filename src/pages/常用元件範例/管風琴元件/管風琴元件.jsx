@@ -1,4 +1,4 @@
-import CustomAccordion from "./CustomAccordion/CustomAccordion";
+import CustomAccordion from "./custom_accordion/custom_accordion";
 
 
 export default function 管風琴元件() {

@@ -1,6 +1,6 @@
 
 
-import './_NumberInputGroup.scss';
+import './_number_input_group.scss';
 import { Accordion } from 'react-bootstrap';
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
@@ -107,12 +107,12 @@ export default function NumberInputGroup ({ id,title,value,unit, min = 0, max = 
                             {
                               dedent(
                                   `
-                                  import './_NumberInputGroup.scss';//讀取樣式
+                                  import './_number_input_group.scss';//讀取樣式
 
                                   //元件用法
                                   //使用方法如下
                                     //先宣告元件
-                                    import NumberInputGroup from './NumberInputGroup/NumberInputGroup';
+                                    import NumberInputGroup from './number_input_group/number_input_group';
                                     //宣告初始數值
                                     const[numData,setNumData] = useState(0);
                                     useEffect(()=>{console.log(numData);},[numData])

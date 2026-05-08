@@ -6,8 +6,8 @@ import 'prismjs/components/prism-markup';   // HTML 支援
 import dedent from 'dedent';//去除多餘空白保持縮排格式
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import ShoppingCartItem from './ShoppingCartItem/ShoppingCartItem';
-import Detail from './Detail/Detail';
+import ShoppingCartItem from './shopping_cart_item/shopping_cart_item';
+import Detail from './detail/detail';
 
 
 

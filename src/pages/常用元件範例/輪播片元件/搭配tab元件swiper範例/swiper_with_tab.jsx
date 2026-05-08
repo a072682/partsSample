@@ -3,7 +3,7 @@ import { Tab, Nav, Accordion } from 'react-bootstrap';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import './_SwiperWithTab.scss'; // 引入強化樣式
+import './_swiper_with_tab.scss'; // 引入強化樣式
 
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
@@ -271,7 +271,7 @@ export default function SwiperWithTab() {
                                         import 'swiper/css';//引入基本swiper樣式
                                         import { Swiper, SwiperSlide } from 'swiper/react';//宣告元件
                                         import { Navigation, Pagination } from 'swiper/modules';//宣告使用的模組
-                                        import './_SwiperWithTab.scss'; // 引入強化樣式
+                                        import './_swiper_with_tab.scss'; // 引入強化樣式
                                         
                                         //資料設定檔
                                         //放置於return上方

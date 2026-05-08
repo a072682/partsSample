@@ -4,7 +4,7 @@ import Prism from 'prismjs';                // 核心功能
 import 'prismjs/components/prism-jsx';      // JSX 支援
 import 'prismjs/components/prism-markup';   // HTML 支援
 import dedent from 'dedent';//去除多餘空白保持縮排格式
-import './_Detail.scss';
+import './_detail.scss';
 
 
 export default function Detail() {

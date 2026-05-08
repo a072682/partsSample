@@ -1,9 +1,9 @@
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import ProductsController from './ProductsController';
-import UploadController from './UploadController';
-import UserController from './UserController';
+import ProductsController from './products_controller';
+import UploadController from './upload_controller';
+import UserController from './user_controller';
 
 
 

@@ -1,4 +1,4 @@
-import './_RenderServer.scss';//引入指定樣式
+import './_render_server.scss';//引入指定樣式
 
 export default function RenderServerUpLoad() {
   return (

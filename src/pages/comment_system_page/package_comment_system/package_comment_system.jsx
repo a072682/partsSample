@@ -1,7 +1,7 @@
 
 
 import { useEffect, useState } from 'react';
-import './_PackageCommentSystem.scss';
+import './_package_comment_system.scss';
 import { Accordion } from 'react-bootstrap';
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import Prism from 'prismjs';                // 核心功能
@@ -250,7 +250,7 @@ function PackageCommentSystem() {
                                 dedent(
                                     `
                                     import { useEffect, useState } from 'react';//宣告狀態
-                                    import './_PackageCommentSystem.scss';//讀取樣式
+                                    import './_package_comment_system.scss';//讀取樣式
 
                                     // 設定檔放置於return上方
                                         //儲存留言的狀態

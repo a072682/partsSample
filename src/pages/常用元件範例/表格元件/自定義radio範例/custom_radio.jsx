@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import './_CustomRadio.scss';
+import './_custom_radio.scss';
 import { Collapse } from 'react-bootstrap';
 
 import { Accordion } from 'react-bootstrap';
@@ -133,7 +133,7 @@ export default function CustomRadio() {
                                     dedent(
                                         `
                                         import { useState } from 'react';//宣告狀態
-                                        import './_CustomRadio.scss';//讀取樣式
+                                        import './_custom_radio.scss';//讀取樣式
                                         import { Collapse } from 'react-bootstrap';//宣告展開元件
 
                                         //元件前置宣告

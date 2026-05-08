@@ -1,4 +1,4 @@
-import ReactTab from "./ReactTab分頁元件/ReactTab";
+import ReactTab from "./ReactTab分頁元件/react_tab";
 
 
 export default function Tab分頁元件() {

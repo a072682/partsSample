@@ -148,7 +148,7 @@ function pluralDropdown() {
                           dedent(
                               `
                               import { useEffect, useState } from 'react';//宣告狀態
-                              import './_ReactCustomDropdown.scss';//讀取樣式
+                              import './_react_custom_dropdown.scss';//讀取樣式
                               import { Dropdown } from 'react-bootstrap';//宣告元件
                               
                               // 設定檔放置於return上方

@@ -1,6 +1,6 @@
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import './_ReactTab.scss';
+import './_react_tab.scss';
 
 import 貼圖按鈕範例 from "./貼圖按鈕範例/貼圖按鈕範例";
 import 圓角按鈕範例 from './圓角範例/圓角範例';

@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import './_MessageItem.scss';
+import './_message_item.scss';
 
 import { Accordion } from 'react-bootstrap';
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
@@ -97,7 +97,7 @@ export default function MessageItem() {
                                         dedent(
                                             `
                                             import { Link } from 'react-router-dom';//宣告連結元件
-                                            import './_MessageItem.scss';//讀取樣式
+                                            import './_message_item.scss';//讀取樣式
 
                                             //元件前置宣告
                                             //放置於return上方

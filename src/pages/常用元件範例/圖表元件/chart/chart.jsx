@@ -1,12 +1,12 @@
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import DonutChart from "./圓環圖/DonutChart";
-import BarChart from "./長條圖/BarChart";
-import LineChart from "./折線圖/LineChart";
-import DonutChartText from "./圓環圖/DonutChartText";
-import BarChartText from './長條圖/BarChartText';
-import LineChartText from './折線圖/LineChartText';
+import DonutChart from "./圓環圖/donut_chart";
+import BarChart from "./長條圖/bar_chart";
+import LineChart from "./折線圖/line_chart";
+import DonutChartText from "./圓環圖/donut_chart_text";
+import BarChartText from './長條圖/bar_chart_text';
+import LineChartText from './折線圖/line_chart_text';
 
 
 export default function ChartTest() {

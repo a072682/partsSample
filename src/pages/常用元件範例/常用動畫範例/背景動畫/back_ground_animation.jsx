@@ -1,5 +1,5 @@
 
-import './_BackGroundAnimation.scss';
+import './_back_ground_animation.scss';
 
 
 export default function BackGroundAnimation() {

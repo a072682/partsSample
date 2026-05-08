@@ -1,7 +1,7 @@
 
 import { Tab, Nav } from 'react-bootstrap';
 import { useState } from 'react';
-import Cloudinary from './Cloudinary';
+import Cloudinary from './cloudinary';
 
 
 

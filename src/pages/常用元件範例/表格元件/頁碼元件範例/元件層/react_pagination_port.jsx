@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './_ReactPaginationPort.scss';
+import './_react_pagination_port.scss';
 
 function ReactPaginationPort({ currentPage, totalPages, onPageChange }) {
   // 🔹 當前頁面，初始為第 1 頁

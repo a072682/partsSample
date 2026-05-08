@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import "./_OpenAIPage.scss";
+import "./_open_ai_page.scss";
 import axios from "axios";
 
 // 後端 API 基礎位址，統一管理避免分散在各函式中

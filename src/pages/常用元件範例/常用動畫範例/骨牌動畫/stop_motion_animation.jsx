@@ -1,6 +1,6 @@
 
 import { useRef } from 'react';
-import './_StopMotionAnimation.scss';
+import './_stop_motion_animation.scss';
 
 export default function StopMotionAnimation() {
     

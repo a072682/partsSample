@@ -2,7 +2,7 @@
 
 import 'prismjs/themes/prism-tomorrow.css'; // 主題樣式
 import dedent from 'dedent';//去除多餘空白保持縮排格式
-import './_ReactBasic.scss';
+import './_react_basic.scss';
 
 
 
@@ -179,7 +179,7 @@ export default function ReactBasic() {
                               import { useState } from "react";
                               import { Nav, Navbar } from "react-bootstrap";
 
-                              import './_Header.scss';
+                              import './_header.scss';
 
 
 

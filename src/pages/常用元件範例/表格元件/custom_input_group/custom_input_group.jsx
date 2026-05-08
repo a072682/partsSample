@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import './_CustomInputGroup.scss';
+import './_custom_input_group.scss';
 import { Collapse } from 'react-bootstrap';
 
 export default function CustomInputGroup() {

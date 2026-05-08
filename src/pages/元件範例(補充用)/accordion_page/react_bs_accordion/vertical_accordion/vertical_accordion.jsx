@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Accordion } from 'react-bootstrap';
-import './_VerticalAccordion.scss';
+import './_vertical_accordion.scss';
 
 
 

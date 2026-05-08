@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Tab, Nav } from 'react-bootstrap';
-import './_ReactTab.scss';
+import './_react_tab.scss';
 import UseForm from "./useForm範例/UseForm範例";
-import CustomRadio from "./自定義radio範例/CustomRadio";
-import NumberInputGroup from "./自訂義input群組(帶按鈕)/NumberInputGroup";
-import ReactPagination from "./頁碼元件範例/使用層/ReactPagination";
+import CustomRadio from "./自定義radio範例/custom_radio";
+import NumberInputGroup from "./自訂義input群組(帶按鈕)/number_input_group";
+import ReactPagination from "./頁碼元件範例/使用層/react_pagination";
 import MessageItem from "./訊息列表範例/訊息列表";
-import DefaultForm from "./簡單表格範例/DefaultForm";
+import DefaultForm from "./簡單表格範例/default_form";
 import Input元件列表 from "./input元件列表/Input元件列表.jsx";
 import 編輯器套件 from "./編輯器套件/編輯器套件";
 
